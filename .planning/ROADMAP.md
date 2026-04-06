@@ -33,7 +33,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. A blank HTML file linking only main.css renders correctly at 320px mobile width with touch-friendly spacing and at 1280px desktop width with appropriate layout shifts — no horizontal scroll at either breakpoint
   4. All editable content zones across every section type have a clear HTML comment convention documented in the CSS file header, ready for agency handoff
   5. Color contrast ratios across all token combinations meet WCAG 2.1 AA minimums (4.5:1 for text, 3:1 for UI components)
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 01-01-PLAN.md — Design tokens, @font-face declarations, global reset, and self-hosted font files
+- [ ] 01-02-PLAN.md — CUBE CSS layers 3-6 (composition, utilities, blocks, exceptions) with visual verification
 **UI hint**: yes
 
 ### Phase 2: JS and Asset Foundation
@@ -125,11 +128,11 @@ Decimal phases appear between their surrounding integers in numeric order.
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. CSS Design System | 0/TBD | Not started | - |
+| 1. CSS Design System | 0/2 | Planning complete | - |
 | 2. JS and Asset Foundation | 0/TBD | Not started | - |
 | 3. German Onepage — Head and SEO Skeleton | 0/TBD | Not started | - |
 | 4. German Onepage — All 12 Content Sections | 0/TBD | Not started | - |

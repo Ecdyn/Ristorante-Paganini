@@ -1,0 +1,187 @@
+<!-- TEST PAGE: Development-time CSS verification. Not a production file. -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Design System Test — Ristorante Paganini</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    /* Test-page-only overrides — placeholder backgrounds for sections without real images */
+    .hero {
+      background-color: var(--color-surface-dark);
+    }
+    .test-label {
+      font-family: monospace;
+      font-size: 0.75rem;
+      background: #eee;
+      color: #333;
+      padding: 0.25rem 0.5rem;
+      display: inline-block;
+      margin-block-end: 0.5rem;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- BLOCK: .header — sticky site navigation                      -->
+  <!-- ============================================================ -->
+  <header class="header">
+    <a href="#" class="font-heading" style="font-size: 1.5rem; text-decoration: none; color: var(--color-accent); font-weight: 700;">
+      Ristorante Paganini
+    </a>
+
+    <nav>
+      <ul class="nav" role="list">
+        <li><a href="#hero" aria-current="true">Start</a></li>
+        <li><a href="#about">Über uns</a></li>
+        <li><a href="#menu">Speisekarte</a></li>
+        <li><a href="#section-dark">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <!-- Visually hidden text example -->
+    <span class="visually-hidden">Navigationsmenü</span>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- BLOCK: .hero — full-viewport hero section                    -->
+  <!-- ============================================================ -->
+  <section class="hero" id="hero">
+    <!-- PLACEHOLDER: Replace with real hero image -->
+    <!-- <img class="hero__bg" src="../images/hero-desktop.avif" width="1400" height="800" alt="" loading="eager" fetchpriority="high"> -->
+    <div class="hero__content flow">
+      <h1>Authentische italienische Küche in Leipzig</h1>
+      <p>Familie Paganini bewirtet Sie seit über 30 Jahren mit Leidenschaft, Handwerk und echter Gastfreundschaft aus Italien.</p>
+      <div class="cluster" style="--cluster-gap: var(--space-4); justify-content: center;">
+        <a href="#reservierung" class="btn" data-variant="primary">Tisch reservieren</a>
+        <a href="#menu" class="btn" data-variant="secondary">Speisekarte ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- BLOCK: .section — default (cream background)                 -->
+  <!-- ============================================================ -->
+  <section class="section" id="about">
+    <div class="wrapper">
+      <div class="content-wrapper flow">
+        <span class="test-label">.section (default)</span>
+        <h2>Über uns</h2>
+        <p>Seit mehr als drei Jahrzehnten steht Ristorante Paganini für traditionelle italienische Küche mitten im Herzen Leipzigs. Handgemachte Pasta, Steinofenpizza und ausgewählte Weine — zubereitet nach Rezepten, die aus echten italienischen Küchen stammen.</p>
+        <p class="text-muted font-sm">Große Fleischergasse, Leipzig Innenstadt · Täglich geöffnet</p>
+        <h3>Unsere Philosophie</h3>
+        <p>Qualität ist keine Ausnahme, sondern unser tägliches Versprechen. Frische Zutaten, ehrliches Handwerk, herzliche Gastfreundschaft.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- BLOCK: .section--alt — alternate cream background            -->
+  <!-- ============================================================ -->
+  <section class="section section--alt" id="menu">
+    <div class="wrapper">
+      <div class="content-wrapper flow">
+        <span class="test-label">.section--alt</span>
+        <h2 class="text-center">Speisekarte</h2>
+        <div class="grid" data-layout="thirds">
+          <div class="flow">
+            <h3>Antipasti</h3>
+            <p>Bruschetta al pomodoro, Vitello tonnato, Insalata caprese con mozzarella di bufala.</p>
+          </div>
+          <div class="flow">
+            <h3>Pasta</h3>
+            <p>Tagliatelle al ragù, Spaghetti carbonara, Pappardelle al tartufo nero.</p>
+          </div>
+          <div class="flow">
+            <h3>Pizza</h3>
+            <p>Margherita, Diavola, Quattro stagioni — immer frisch aus dem Steinofen.</p>
+          </div>
+        </div>
+        <p class="text-center">
+          <a href="#" class="btn" data-variant="primary">Speisekarte herunterladen (PDF)</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- BLOCK: .section (default) — buttons showcase                 -->
+  <!-- ============================================================ -->
+  <section class="section">
+    <div class="wrapper">
+      <div class="content-wrapper flow">
+        <span class="test-label">Button variants — data-variant attribute</span>
+        <h2>Aktionen</h2>
+        <p>Beide Schaltflächenvarianten im Vergleich. Beide erfüllen die 44px Mindesthöhe für Touch-Targets.</p>
+        <div class="cluster" style="--cluster-gap: var(--space-4);">
+          <a href="#" class="btn" data-variant="primary">Primary — Tisch reservieren</a>
+          <a href="#" class="btn" data-variant="secondary">Secondary — Mehr erfahren</a>
+        </div>
+        <p class="font-sm text-muted">Hover-Zustand: Primary wird dunkler, Secondary füllt sich mit Akzentfarbe.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- BLOCK: .section--alt — grid layout halves                    -->
+  <!-- ============================================================ -->
+  <section class="section section--alt" id="reservierung">
+    <div class="wrapper">
+      <span class="test-label">.grid[data-layout="halves"] at 48rem+</span>
+      <div class="grid" data-layout="halves">
+        <div class="flow">
+          <h2>Reservierung</h2>
+          <p>Reservieren Sie Ihren Tisch bequem online oder rufen Sie uns direkt an. Wir freuen uns auf Ihren Besuch.</p>
+          <a href="tel:+493410000000" class="btn" data-variant="primary">+49 341 XXX XXXX</a>
+        </div>
+        <div class="flow">
+          <h3>Öffnungszeiten</h3>
+          <!-- EDITABLE: Opening hours — update before launch -->
+          <!-- SYNC: Update this value in de/, en/, and it/ files -->
+          <p>Montag – Freitag: 11:30 – 22:00 Uhr</p>
+          <p>Samstag & Sonntag: 12:00 – 23:00 Uhr</p>
+          <p class="text-muted font-sm">Mittagstisch: 11:30 – 14:30 Uhr (Mo–Fr)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- BLOCK: .section--dark — dark espresso background             -->
+  <!-- ============================================================ -->
+  <section class="section section--dark text-center" id="section-dark">
+    <div class="wrapper">
+      <div class="content-wrapper flow">
+        <span class="test-label" style="background: #444; color: #eee;">.section--dark</span>
+        <h2>Kontakt & Anfahrt</h2>
+        <p>Ristorante Paganini · Große Fleischergasse XX · 04109 Leipzig</p>
+        <p class="font-sm">Parkplätze: Brühl Center (~200m), Große Fleischergasse (öffentlich kostenpflichtig)</p>
+        <div class="cluster" style="--cluster-gap: var(--space-4); justify-content: center;">
+          <a href="mailto:info@ristorante-paganini.de" class="btn" data-variant="secondary">E-Mail senden</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- BLOCK: .section — typography specimen                        -->
+  <!-- ============================================================ -->
+  <section class="section">
+    <div class="wrapper">
+      <div class="content-wrapper flow">
+        <span class="test-label">Typography specimen — Cormorant Garamond + Lato</span>
+        <h2>Typografie-Probe</h2>
+        <p class="font-heading" style="font-size: var(--font-size-display);">H1 Display — Ristorante Paganini</p>
+        <h3>H3 Unterabschnitt — Küche &amp; Atmosphäre</h3>
+        <p>Fließtext in Lato Regular (400): Lorem ipsum dolor sit amet, consectetur adipiscing elit. Die Schriftart Lato bietet ausgezeichnete Lesbarkeit auf allen Bildschirmgrößen — sowohl auf dem Smartphone als auch auf dem Desktop-Monitor. <em>Kursiver Text für Hervorhebungen.</em></p>
+        <p class="text-muted">Gedämpfter Sekundärtext — Captions, Öffnungszeiten, Rechtliches. Kleine Zahl: Reservierung für 2 Personen.</p>
+        <p class="font-sm">Caption / Kleingedruckt (0.875rem Lato) — Pflichtangaben, Fußnoten, Quellenangaben</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

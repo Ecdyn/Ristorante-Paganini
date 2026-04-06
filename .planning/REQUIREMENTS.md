@@ -1,0 +1,148 @@
+# Requirements: Ristorante Paganini Website
+
+**Defined:** 2026-04-06
+**Core Value:** Visitors instantly trust Ristorante Paganini as an authentic, premium Italian restaurant in Leipzig's city center and can reserve a table within seconds.
+
+## v1 Requirements
+
+### Foundation
+
+- [ ] **FOUND-01**: Site uses semantic HTML5 with single H1 per page and proper heading hierarchy
+- [ ] **FOUND-02**: CSS design system uses custom properties for colors, spacing, typography, shadows, radii
+- [ ] **FOUND-03**: Mobile-first responsive layout with touch-friendly navigation and tappable CTAs
+- [ ] **FOUND-04**: Sticky header with smooth show/hide behavior on scroll
+- [ ] **FOUND-05**: Responsive hamburger mobile menu with accessible toggle
+- [ ] **FOUND-06**: Smooth anchor scrolling with scroll-padding for sticky header offset
+- [ ] **FOUND-07**: Self-hosted web fonts (GDPR-compliant, no Google Fonts CDN)
+- [ ] **FOUND-08**: AVIF/WebP/JPEG picture elements with explicit width/height attributes
+- [ ] **FOUND-09**: WCAG 2.1 AA accessibility: alt text, keyboard nav, color contrast, focus indicators
+- [ ] **FOUND-10**: All editable content areas marked with clear HTML comments
+
+### Content Sections
+
+- [ ] **SECT-01**: Hero section with restaurant name, headline, subheadline, reservation CTA, menu CTA, trust cues, background image
+- [ ] **SECT-02**: Quick info bar with opening hours, address, phone, reservation CTA, lunch hours, terrace note
+- [ ] **SECT-03**: About/Philosophy section with family-run story, authentic Italian identity, quality promise
+- [ ] **SECT-04**: Menu overview with HTML preview (pasta, pizza, antipasti, wine) + full menu CTA + PDF download
+- [ ] **SECT-05**: Business lunch section with hours (11:30-14:30), editable highlights, PDF link, status/holiday notes
+- [ ] **SECT-06**: Gallery with elegant CSS grid (interior, food, terrace, exterior) and lazy loading
+- [ ] **SECT-07**: Reservation section with external embed placeholder, fallback CTA button, phone option
+- [ ] **SECT-08**: Groups/Events section with phone + email inquiry CTAs and trust-focused copy
+- [ ] **SECT-09**: Location section with address block, static Google Maps link (no iframe), parking info
+- [ ] **SECT-10**: FAQ section with 7 SEO-relevant questions and answers
+- [ ] **SECT-11**: Contact section with phone, email, address, opening hours, Instagram link placeholder
+- [ ] **SECT-12**: Footer with legal links, language switcher, contact summary, copyright
+
+### Multilingual
+
+- [ ] **LANG-01**: German version at /de/index.html as primary language
+- [ ] **LANG-02**: English version at /en/index.html fully localized
+- [ ] **LANG-03**: Italian version at /it/index.html fully localized
+- [ ] **LANG-04**: Root index.html with browser language detection and default redirect to /de/
+- [ ] **LANG-05**: All nav labels, buttons, headings, meta, schema, and interface strings translated per language
+- [ ] **LANG-06**: Separate legal pages per language (Impressum + Datenschutz) with placeholder content
+
+### SEO & Structured Data
+
+- [ ] **SEO-01**: Per-page meta titles and descriptions in each language
+- [ ] **SEO-02**: Open Graph and Twitter card tags per language page
+- [ ] **SEO-03**: Reciprocal hreflang tags on all pages (DE, EN, IT, x-default) with self-canonicalization
+- [ ] **SEO-04**: JSON-LD Restaurant + LocalBusiness schema with commented placeholder values
+- [ ] **SEO-05**: JSON-LD FAQPage schema on FAQ section
+- [ ] **SEO-06**: sitemap.xml listing all language variants
+- [ ] **SEO-07**: robots.txt with sitemap reference
+- [ ] **SEO-08**: Local SEO copy targeting German search intent (natural, not keyword-stuffed)
+- [ ] **SEO-09**: Favicon setup (SVG + ICO + apple-touch-icon + webmanifest)
+
+### Performance
+
+- [ ] **PERF-01**: Hero/LCP image eagerly loaded with fetchpriority="high"
+- [ ] **PERF-02**: Below-fold images lazy loaded with loading="lazy" decoding="async"
+- [ ] **PERF-03**: No render-blocking JavaScript
+- [ ] **PERF-04**: Minimal vanilla JS (mobile menu, sticky header, language redirect only)
+
+## v2 Requirements
+
+### Post-Launch Enhancements
+
+- **POST-01**: Replace placeholder images with professional photography
+- **POST-02**: Integrate live reservation widget (TheFork/Resy/OpenTable) once platform selected
+- **POST-03**: Set up analytics (Plausible or GA4) based on privacy decision
+- **POST-04**: Align Google Business Profile with website structured data
+
+### Future Consideration
+
+- **FUTR-01**: Aggregated Google Reviews display (adds JS weight)
+- **FUTR-02**: Seasonal content rotation for terrace prominence
+
+## Out of Scope
+
+| Feature | Reason |
+|---------|--------|
+| Custom reservation system | Backend requirement breaks static-site constraint; solved by third-party embed |
+| Chatbot / AI assistant | JS-heavy, requires backend, off-brand for premium Italian dining |
+| Blog / news section | Onepage model; no content team; stale blog worse than no blog |
+| Online ordering / delivery | Dine-in only; requires backend, POS, payment processing |
+| Social media feed embed | API fragility, JS weight, maintenance overhead; Instagram link suffices |
+| Multiple pages beyond onepage + legal | Breaks onepage architecture; anchor sections handle all content |
+| Heavy animation / carousel sliders | JS weight, render-blocking, documented conversion killers |
+| Team / staff section | Owner preference; gallery covers food/interior/terrace only |
+| Payment processing | PCI compliance requirements; not a business need |
+| Google Maps iframe embed | GDPR liability in Germany; static address + link approach chosen |
+| Backend form processing | Static site constraint; phone + email inquiry approach chosen |
+| Cookie consent banner | No tracking cookies needed if using privacy-friendly analytics or none |
+
+## Traceability
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| FOUND-01 | Pending | Pending |
+| FOUND-02 | Pending | Pending |
+| FOUND-03 | Pending | Pending |
+| FOUND-04 | Pending | Pending |
+| FOUND-05 | Pending | Pending |
+| FOUND-06 | Pending | Pending |
+| FOUND-07 | Pending | Pending |
+| FOUND-08 | Pending | Pending |
+| FOUND-09 | Pending | Pending |
+| FOUND-10 | Pending | Pending |
+| SECT-01 | Pending | Pending |
+| SECT-02 | Pending | Pending |
+| SECT-03 | Pending | Pending |
+| SECT-04 | Pending | Pending |
+| SECT-05 | Pending | Pending |
+| SECT-06 | Pending | Pending |
+| SECT-07 | Pending | Pending |
+| SECT-08 | Pending | Pending |
+| SECT-09 | Pending | Pending |
+| SECT-10 | Pending | Pending |
+| SECT-11 | Pending | Pending |
+| SECT-12 | Pending | Pending |
+| LANG-01 | Pending | Pending |
+| LANG-02 | Pending | Pending |
+| LANG-03 | Pending | Pending |
+| LANG-04 | Pending | Pending |
+| LANG-05 | Pending | Pending |
+| LANG-06 | Pending | Pending |
+| SEO-01 | Pending | Pending |
+| SEO-02 | Pending | Pending |
+| SEO-03 | Pending | Pending |
+| SEO-04 | Pending | Pending |
+| SEO-05 | Pending | Pending |
+| SEO-06 | Pending | Pending |
+| SEO-07 | Pending | Pending |
+| SEO-08 | Pending | Pending |
+| SEO-09 | Pending | Pending |
+| PERF-01 | Pending | Pending |
+| PERF-02 | Pending | Pending |
+| PERF-03 | Pending | Pending |
+| PERF-04 | Pending | Pending |
+
+**Coverage:**
+- v1 requirements: 35 total
+- Mapped to phases: 0
+- Unmapped: 35 ⚠️
+
+---
+*Requirements defined: 2026-04-06*
+*Last updated: 2026-04-06 after initial definition*

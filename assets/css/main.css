@@ -1,0 +1,284 @@
+/*
+ * MAIN.CSS -- Ristorante Paganini
+ * ================================
+ * Single stylesheet — no @import, no preprocessor, no build step.
+ * CUBE CSS methodology (piccalil.li): Composition, Utility, Block, Exception.
+ *
+ * TABLE OF CONTENTS
+ * -----------------
+ *   1. DESIGN TOKENS
+ *   2. GLOBAL / RESET
+ *   3. COMPOSITION
+ *   4. UTILITIES
+ *   5. BLOCKS
+ *   6. EXCEPTIONS
+ *
+ * ================================================================
+ * EDITABLE CONTENT ZONES
+ * ----------------------
+ * HTML files use this comment convention to mark all live data:
+ *   <!-- EDITABLE: [description of what to update] -->
+ *   <!-- SYNC: Update this value in de/, en/, and it/ files -->
+ *   <!-- PLACEHOLDER: Replace with real content before launch -->
+ *
+ * Any value wrapped in these comments must be updated before launch.
+ * SYNC markers indicate the same value appears in all three language
+ * files — update all three simultaneously to avoid inconsistencies.
+ * ================================================================
+ */
+
+
+/* == 1. DESIGN TOKENS ========================================== */
+/*
+ * All visual decisions live here as CSS custom properties.
+ * No color, spacing, or typography value should appear outside
+ * this :root block (except in calc() and clamp() expressions
+ * that reference these tokens).
+ */
+
+:root {
+
+  /* --- Colors ------------------------------------------------- */
+  --color-accent:        #7A2D3A;
+  --color-accent-hover:  #5E2230;
+  --color-accent-light:  #9E4455;
+  --color-surface:       #FBF5F5;
+  --color-surface-alt:   #F5EDEE;
+  --color-surface-dark:  #2C1A1D;
+  --color-text:          #2A1F20;
+  --color-text-muted:    #6B5557;
+  --color-text-inverse:  #FBF5F5;
+  --color-border:        #DFD0D2;
+  --color-overlay:       rgba(28, 12, 14, 0.55);
+
+  /* --- Typography --------------------------------------------- */
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Lato', system-ui, sans-serif;
+
+  /* Font sizes — 4 named tokens + body base set on html/body */
+  --font-size-display:    clamp(2.5rem, 6vw, 4.5rem);   /* Hero + H1, fluid */
+  --font-size-heading-lg: clamp(1.625rem, 3vw, 2rem);   /* H2, fluid */
+  --font-size-heading-sm: 1.375rem;                      /* H3, fixed */
+  --font-size-sm:         0.875rem;                      /* Captions / legal */
+
+  /* Font weights — exactly 2 tokens */
+  --font-weight-normal: 400;
+  --font-weight-bold:   700;
+
+  /* Line heights */
+  --line-height-base:       1.6;   /* Body text */
+  --line-height-heading:    1.15;  /* H1 / display */
+  --line-height-heading-lg: 1.2;   /* H2 */
+  --line-height-heading-sm: 1.25;  /* H3 */
+
+  /* --- Spacing Scale ------------------------------------------ */
+  /* Multiples of 4px expressed in rem (base 16px) */
+  --space-1:  0.25rem;   /*   4px */
+  --space-2:  0.5rem;    /*   8px */
+  --space-3:  0.75rem;   /*  12px — compact interactive (input padding, pill tags) */
+  --space-4:  1rem;      /*  16px */
+  --space-6:  1.5rem;    /*  24px */
+  --space-8:  2rem;      /*  32px */
+  --space-12: 3rem;      /*  48px */
+  --space-16: 4rem;      /*  64px */
+  --space-20: 5rem;      /*  80px — section vertical spacing minimum */
+  --space-24: 6rem;      /*  96px — section vertical spacing mid */
+  --space-30: 7.5rem;    /* 120px — section vertical spacing maximum */
+
+  /* --- Layout ------------------------------------------------- */
+  --wrapper-max:      1200px;
+  --content-max:      800px;
+  --wrapper-padding:  var(--space-6);
+  --header-height:    4.5rem;   /* 72px — used for scroll-padding-top */
+  --section-spacing:  clamp(5rem, 8vw, 7.5rem);
+
+  /* --- Shadows ------------------------------------------------ */
+  --shadow-sm: 0 1px 3px rgba(42, 31, 32, 0.08);
+  --shadow-md: 0 4px 12px rgba(42, 31, 32, 0.12);
+  --shadow-lg: 0 8px 32px rgba(42, 31, 32, 0.16);
+
+  /* --- Radii -------------------------------------------------- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* --- Transitions ------------------------------------------- */
+  --transition-fast: 150ms ease;   /* Focus rings, hover color changes */
+  --transition-base: 250ms ease;   /* Button hover, link hover, nav state */
+  --transition-slow: 400ms ease;   /* Header scroll state, section reveals */
+
+  /* --- Z-index ------------------------------------------------ */
+  --z-header:  100;
+  --z-overlay: 200;
+  --z-modal:   300;
+
+}
+
+
+/* == @FONT-FACE ================================================= */
+/*
+ * Self-hosted woff2 — no request to fonts.googleapis.com or
+ * fonts.gstatic.com. GDPR/DSGVO compliant for German audience.
+ * Source: google-webfonts-helper (gwfh.mranftl.com), Latin subset.
+ * font-display: swap — text visible immediately in fallback font.
+ */
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant-garamond-v22-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant-garamond-v22-latin-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato-v24-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato-v24-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* == 2. GLOBAL / RESET ========================================= */
+/*
+ * Box model normalization and sensible element defaults.
+ * Follows Josh Comeau's CSS reset approach adapted for CUBE CSS.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: var(--header-height);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Heading hierarchy — Cormorant Garamond for all levels */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-heading);
+}
+
+h1 {
+  font-size: var(--font-size-display);
+}
+
+h2 {
+  font-size: var(--font-size-heading-lg);
+  line-height: var(--line-height-heading-lg);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+h3 {
+  font-size: var(--font-size-heading-sm);
+  line-height: var(--line-height-heading-sm);
+}
+
+/* Replaced elements — prevent overflow and preserve aspect ratio */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+/* Form elements inherit font from body (not browser default) */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Links */
+a {
+  color: var(--color-accent);
+  text-decoration-skip-ink: auto;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Focus indicator — keyboard-only, WCAG 2.1 AA */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+  transition: outline-offset var(--transition-fast);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Reduced motion — collapse all animations for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* == 3. COMPOSITION ============================================ */
+/* Populated in Plan 02 */
+
+/* == 4. UTILITIES ============================================== */
+/* Populated in Plan 02 */
+
+/* == 5. BLOCKS ================================================= */
+/* Populated in Plan 02 */
+
+/* == 6. EXCEPTIONS ============================================= */
+/* Populated in Plan 02 */

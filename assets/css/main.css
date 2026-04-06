@@ -272,13 +272,292 @@ a:hover {
 
 
 /* == 3. COMPOSITION ============================================ */
-/* Populated in Plan 02 */
+/*
+ * Layout primitives — structural patterns with no visual opinion.
+ * These primitives wrap content and define spatial relationships.
+ * They do NOT apply colors, fonts, or decorative properties.
+ */
+
+/* --- Flow: vertical rhythm via inherited margin -------------- */
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+/* --- Cluster: inline flexible group (buttons, tags, nav) ----- */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-gap, var(--space-4));
+  align-items: center;
+}
+
+/* --- Wrapper: full-width content constraint ------------------ */
+.wrapper {
+  max-width: var(--wrapper-max);
+  margin-inline: auto;
+  padding-inline: var(--wrapper-padding);
+}
+
+/* --- Content wrapper: narrow text constraint ---------------- */
+.content-wrapper {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--wrapper-padding);
+}
+
+/* --- Grid: general-purpose grid layout ---------------------- */
+.grid {
+  display: grid;
+  gap: var(--grid-gap, var(--space-6));
+}
+
+@media (min-width: 48rem) {
+  .grid[data-layout="halves"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .grid[data-layout="thirds"] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid[data-layout="quarters"] {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 
 /* == 4. UTILITIES ============================================== */
-/* Populated in Plan 02 */
+/*
+ * Single-purpose helper classes.
+ * Each class does exactly one thing.
+ */
+
+/* --- Accessibility: screen-reader only text ----------------- */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* --- Text alignment ----------------------------------------- */
+.text-center {
+  text-align: center;
+}
+
+/* --- Muted / secondary text color --------------------------- */
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* --- Force heading font on non-heading elements ------------- */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+/* --- Small / caption text size ----------------------------- */
+.font-sm {
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+
 
 /* == 5. BLOCKS ================================================= */
-/* Populated in Plan 02 */
+/*
+ * Component-level styles — each block is an independent visual unit.
+ * Blocks reference design tokens; never hard-code values here.
+ * Block variants use data-attributes per CUBE CSS methodology.
+ */
+
+/* --- Header: sticky site navigation container --------------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--wrapper-padding);
+  background-color: var(--color-surface);
+  transition: box-shadow var(--transition-slow);
+}
+
+/* --- Nav: horizontal navigation link list ------------------- */
+.nav {
+  display: flex;
+  gap: var(--space-6);
+  list-style: none;
+}
+
+.nav a {
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-block: var(--space-2);
+  transition: color var(--transition-base);
+}
+
+.nav a:hover,
+.nav a[aria-current="true"] {
+  color: var(--color-accent);
+}
+
+/* Hide nav on mobile — shown only on desktop (64rem+) */
+@media (max-width: 63.999rem) {
+  .nav {
+    display: none;
+  }
+}
+
+/* --- Hero: full-viewport hero section with overlay ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-text-inverse);
+  overflow: hidden;
+}
+
+/* Dark overlay on top of background image */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-overlay);
+  z-index: 1;
+}
+
+/* Hero text content — above overlay */
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--content-max);
+  padding-inline: var(--wrapper-padding);
+}
+
+/* Hero background image — behind overlay */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* --- Btn: interactive call-to-action button ------------------ */
+/*
+ * Variants use data-variant attribute per CUBE CSS methodology.
+ * data-variant="primary"   — solid wine fill, white text (main CTA)
+ * data-variant="secondary" — wine border, transparent fill (secondary action)
+ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-6);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+}
+
+.btn[data-variant="primary"] {
+  background-color: var(--color-accent);
+  color: var(--color-text-inverse);
+  border-color: var(--color-accent);
+}
+
+.btn[data-variant="primary"]:hover,
+.btn[data-variant="primary"]:focus-visible {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: var(--color-text-inverse);
+}
+
+.btn[data-variant="secondary"] {
+  background-color: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn[data-variant="secondary"]:hover,
+.btn[data-variant="secondary"]:focus-visible {
+  background-color: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+/* --- Section: generic page section with vertical spacing ----- */
+.section {
+  padding-block: var(--section-spacing);
+}
+
+/* Alternate section — deeper cream background */
+.section--alt {
+  background-color: var(--color-surface-alt);
+}
+
+/* Dark section — espresso background (footer) */
+.section--dark {
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-inverse);
+}
+
+.section--dark a {
+  color: var(--color-text-inverse);
+}
+
+.section--dark a:hover {
+  color: var(--color-accent-light);
+}
+
+/* H2 decorative rule — short wine-colored underline per UI-SPEC */
+.section h2::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background-color: var(--color-accent);
+  margin-block-start: var(--space-4);
+}
+
+/* Center the decorative rule when section or h2 is centered */
+.section.text-center h2::after,
+.section .text-center h2::after {
+  margin-inline: auto;
+}
+
 
 /* == 6. EXCEPTIONS ============================================= */
-/* Populated in Plan 02 */
+/*
+ * Data-attribute overrides for dynamic states.
+ * Applied via JavaScript; never set statically in HTML.
+ */
+
+/* Header gains shadow when page is scrolled */
+.header[data-state="scrolled"] {
+  box-shadow: var(--shadow-md);
+}
+
+/* Header slides out of view when scrolling down (optional UX) */
+.header[data-state="hidden"] {
+  transform: translateY(-100%);
+}

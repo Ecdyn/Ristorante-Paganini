@@ -5,6 +5,8 @@ status: draft
 shadcn_initialized: false
 preset: none
 created: 2026-04-06
+revised: 2026-04-06
+revision_reason: Checker issues — collapsed font sizes to 4, consolidated weights to 2, justified 12px spacing exception
 ---
 
 # Phase 1 — UI Design Contract: CSS Design System
@@ -61,6 +63,7 @@ Exceptions:
 - Touch targets (buttons, nav links): minimum 44px height — enforced via `min-height: 44px` in `.btn` block and nav link padding, not a spacing token.
 - Hero section: full viewport height (`100vh`) — layout value, not a spacing token.
 - Header height: 72px (4.5rem) — stored as `--header-height` for `scroll-padding-top` use in Phase 2.
+- `--space-3` (12px): 12 is a multiple of 4 and sits between 8px and 16px on the standard scale. It is justified as an explicit scale step for compact interactive elements (input padding, pill tags) where 8px is too tight and 16px is too loose. It is used only in those two specific contexts and not as a general spacing unit.
 
 Source: CONTEXT.md D-08, D-09; RESEARCH.md Pattern 2 token architecture.
 
@@ -72,32 +75,42 @@ Source: CONTEXT.md D-08, D-09; RESEARCH.md Pattern 2 token architecture.
 
 | Role | Family | Format | Weights Loaded |
 |------|--------|--------|----------------|
-| Heading (H1–H4) | Cormorant Garamond | woff2, self-hosted | 300, 300i, 400, 400i, 600 |
+| Heading (H1–H4) | Cormorant Garamond | woff2, self-hosted | 400, 400i |
 | Body, nav, buttons, captions | Lato | woff2, self-hosted | 400, 700 |
 
 Font loading: `font-display: swap` on all `@font-face` declarations.
 Font source: google-webfonts-helper (gwfh.mranftl.com), Latin subset only.
 No request to fonts.googleapis.com or fonts.gstatic.com at any point.
 
+Cormorant Garamond weight reduction: 300 (light) and 600 (semibold) are dropped. Weight 400 carries all heading roles. Visual hierarchy is established via fluid size scaling, uppercase + letter-spacing on H2, and line-height — not weight variation within the serif family.
+
 ### Type Scale
 
-| Role | Token | Desktop Size | Mobile Size | Weight | Line Height | Font Family |
-|------|-------|-------------|-------------|--------|-------------|-------------|
-| Hero display | `--font-size-hero` | clamp(2.5rem, 6vw, 4.5rem) — fluid | (fluid, auto-shrinks) | 300 (light) | 1.15 | Cormorant Garamond |
-| H1 | `--font-size-h1` | 3rem (48px) | 2.4rem (~38px) | 400 | 1.15 | Cormorant Garamond |
-| H2 | `--font-size-h2` | 2rem (32px) | 1.625rem (~26px) | 600 (semibold) | 1.15 | Cormorant Garamond |
-| H3 | `--font-size-h3` | 1.375rem (22px) | 1.125rem (18px) | 600 (semibold) | 1.2 | Cormorant Garamond |
-| Lead / intro | `--font-size-md` | 1.125rem (18px) | 1rem (16px) | 400 | 1.6 | Lato |
-| Body | `--font-size-base` | 1rem (16px) | 1rem (16px) | 400 | 1.6 | Lato |
-| Caption / legal | `--font-size-sm` | 0.875rem (14px) | 0.875rem (14px) | 400 | 1.5 | Lato |
+Four named font-size tokens. Body base (1rem / 16px) is set on `html` and `body` as the cascade default — it is not a named scale token.
 
-Mobile reduction: approximately 20% for H1 and H2 via media query at 768px breakpoint. Body size stays at 16px on all viewports (already comfortable on mobile).
+| Role | Token | Size | Weight Token | Line Height | Font Family |
+|------|-------|------|-------------|-------------|-------------|
+| Hero display + H1 | `--font-size-display` | `clamp(2.5rem, 6vw, 4.5rem)` — fluid | `--font-weight-normal` (400) | 1.15 | Cormorant Garamond |
+| H2 section title | `--font-size-heading-lg` | `clamp(1.625rem, 3vw, 2rem)` — fluid | `--font-weight-normal` (400) | 1.2 | Cormorant Garamond |
+| H3 subsection | `--font-size-heading-sm` | 1.375rem (22px) | `--font-weight-normal` (400) | 1.25 | Cormorant Garamond |
+| Caption / legal | `--font-size-sm` | 0.875rem (14px) | `--font-weight-normal` (400) | 1.5 | Lato |
 
-Weights in use: 300, 400, 600 (Cormorant Garamond) + 400, 700 (Lato). In CSS tokens: `--font-weight-normal: 400`, `--font-weight-semibold: 600`, `--font-weight-bold: 700`.
+Body copy (unlisted token): 1rem (16px), `--font-weight-normal` (400), line-height 1.6, Lato. Lead/intro paragraphs share this size and are differentiated from body by `font-style: italic` or a slightly increased line-height (1.7), not a distinct size token.
+
+Mobile behavior: `--font-size-display` and `--font-size-heading-lg` use fluid `clamp()` values and shrink automatically with viewport. `--font-size-heading-sm` stays fixed at 1.375rem on all viewports. Body and caption sizes do not change across breakpoints.
+
+### Font Weight Tokens
+
+Exactly two weight tokens. No other weight values appear anywhere in `main.css`.
+
+| Token | Value | Applied To |
+|-------|-------|-----------|
+| `--font-weight-normal` | 400 | Cormorant Garamond (all headings), Lato body, captions, nav links |
+| `--font-weight-bold` | 700 | Lato buttons, Lato bold emphasis, nav brand name |
 
 ### H2 Section Title Treatment (Claude's Discretion — resolved)
 
-H2 section titles use: uppercase + tracked letter-spacing (`letter-spacing: 0.12em`) in Cormorant Garamond weight 600. This is the standard treatment for premium Italian restaurant headings — creates visual hierarchy without font size alone and reads as refined rather than loud. Combined with a short decorative rule (2px wine-colored `<hr>`-equivalent using CSS `::after` on the section label) for section identity.
+H2 section titles use: uppercase (`text-transform: uppercase`) + tracked letter-spacing (`letter-spacing: 0.12em`) in Cormorant Garamond weight 400. Uppercase + generous tracking creates visual distinction without relying on weight variation. A short decorative rule (2px wine-colored `::after` pseudo-element below the H2) adds section identity. This treatment is premium and reads as refined rather than loud.
 
 Source: CONTEXT.md D-05 (heading scale), RESEARCH.md Pattern 2 token block.
 
@@ -336,3 +349,6 @@ These are the CSS blocks (`.block-name`) that `main.css` must define in Layer 5:
 | Spacing scale progression | RESEARCH.md Pattern 2 (Claude's Discretion) |
 | Responsive breakpoints | CLAUDE.md tech stack |
 | Copywriting (DE) | REQUIREMENTS.md SECT-01 through SECT-12 |
+| Font sizes collapsed to 4 tokens | Checker revision 2026-04-06 |
+| Font weights consolidated to 2 | Checker revision 2026-04-06 |
+| 12px spacing exception justified | Checker revision 2026-04-06 |

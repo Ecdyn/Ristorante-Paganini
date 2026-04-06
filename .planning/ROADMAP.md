@@ -35,8 +35,8 @@ Decimal phases appear between their surrounding integers in numeric order.
   5. Color contrast ratios across all token combinations meet WCAG 2.1 AA minimums (4.5:1 for text, 3:1 for UI components)
 **Plans:** 2 plans
 Plans:
-- [ ] 01-01-PLAN.md — Design tokens, @font-face declarations, global reset, and self-hosted font files
-- [ ] 01-02-PLAN.md — CUBE CSS layers 3-6 (composition, utilities, blocks, exceptions) with visual verification
+- [x] 01-01-PLAN.md — Design tokens, @font-face declarations, global reset, and self-hosted font files
+- [x] 01-02-PLAN.md — CUBE CSS layers 3-6 (composition, utilities, blocks, exceptions) with visual verification
 **UI hint**: yes
 
 ### Phase 2: JS and Asset Foundation

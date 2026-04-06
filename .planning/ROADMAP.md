@@ -26,7 +26,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 ### Phase 1: CSS Design System
 **Goal**: A single locked CSS file exists that defines every visual decision for the entire site — any HTML file that links it gets the correct typography, colors, spacing, and responsive layout without any additional work
 **Depends on**: Nothing (first phase)
-**Requirements**: FOUND-01, FOUND-02, FOUND-03, FOUND-07, FOUND-09, FOUND-10
+**Requirements**: FOUND-02, FOUND-03, FOUND-07, FOUND-09, FOUND-10
 **Success Criteria** (what must be TRUE):
   1. A developer can open assets/css/main.css and see all design token values in the :root block — colors, spacing scale, typography scale, z-index values, transition values — and change the accent color in one line to see it update everywhere
   2. Self-hosted woff2 font files for Cormorant Garamond and Lato exist in assets/fonts/ with @font-face declarations and font-display: swap, with no request to Google Fonts CDN at any point
@@ -55,7 +55,7 @@ Plans:
 ### Phase 3: German Onepage — Head and SEO Skeleton
 **Goal**: The /de/index.html file exists as a valid HTML5 document with a complete, correct head section — all meta tags, hreflang, JSON-LD structured data, and canonical wiring in place before a single word of content is written in the body
 **Depends on**: Phase 2
-**Requirements**: LANG-01, SEO-01, SEO-02, SEO-03, SEO-04, SEO-05
+**Requirements**: FOUND-01, LANG-01, SEO-01, SEO-02, SEO-03, SEO-04, SEO-05
 **Success Criteria** (what must be TRUE):
   1. Google's Rich Results Test returns zero errors on the JSON-LD Restaurant + LocalBusiness block — all required fields present, openingHoursSpecification correctly formatted, PostalAddress complete with placeholder values clearly commented
   2. The hreflang block contains all four tags (hreflang="de", hreflang="en", hreflang="it", hreflang="x-default") using absolute URLs, and the self-canonical tag points to the DE URL — not any other language version

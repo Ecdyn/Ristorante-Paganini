@@ -579,7 +579,7 @@ All directives below are binding on the planner and executor:
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **data-attribute naming: `data-scrolled` (UI-SPEC) vs `data-state="scrolled"` (main.css)**
    - What we know: main.css exceptions block (lines 556-563) uses `[data-state="scrolled"]` and `[data-state="hidden"]`. UI-SPEC uses `data-scrolled="true"`.

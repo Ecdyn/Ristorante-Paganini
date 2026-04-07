@@ -384,7 +384,8 @@ a:hover {
   justify-content: space-between;
   padding-inline: var(--wrapper-padding);
   background-color: var(--color-surface);
-  transition: box-shadow var(--transition-slow);
+  color: var(--color-text);
+  transition: background-color var(--transition-slow), box-shadow var(--transition-slow), color var(--transition-slow);
 }
 
 /* --- Nav: horizontal navigation link list ------------------- */
@@ -416,6 +417,96 @@ a:hover {
   .nav {
     display: none;
   }
+}
+
+/* --- Menu toggle: hamburger button for mobile navigation ---- */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 63.999rem) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: calc(var(--z-overlay) + 1);
+  }
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text);
+  transition: background-color var(--transition-base);
+}
+
+/* --- Mobile menu: full-screen overlay navigation ------------ */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  background-color: var(--color-surface-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.mobile-menu[data-open="true"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobile-menu a {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-heading-lg);
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  padding: var(--space-4);
+  transition: color var(--transition-base);
+}
+
+.mobile-menu a:hover {
+  color: var(--color-accent-light);
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: none;
+  border: none;
+  color: var(--color-text-inverse);
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  padding: var(--space-2);
+  opacity: 0.7;
+  transition: opacity var(--transition-base);
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-close:hover {
+  opacity: 1;
 }
 
 /* --- Hero: full-viewport hero section with overlay ---------- */
@@ -552,12 +643,57 @@ a:hover {
  * Applied via JavaScript; never set statically in HTML.
  */
 
-/* Header gains shadow when page is scrolled */
-.header[data-state="scrolled"] {
-  box-shadow: var(--shadow-md);
+/* Header transparent over hero — JS removes data-state entirely at top */
+.header:not([data-state]) {
+  background-color: transparent;
+  color: var(--color-text-inverse);
+  transition: background-color var(--transition-slow), box-shadow var(--transition-slow), color var(--transition-slow);
 }
 
-/* Header slides out of view when scrolling down (optional UX) */
+.header:not([data-state]) .nav a {
+  color: var(--color-text-inverse);
+}
+
+.header:not([data-state]) .nav a:hover {
+  color: var(--color-accent-light);
+}
+
+.header:not([data-state]) .menu-toggle span {
+  background-color: var(--color-text-inverse);
+}
+
+/* Header gains solid background and shadow when scrolled past hero */
+.header[data-state="scrolled"] {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+}
+
+.header[data-state="scrolled"] .nav a {
+  color: var(--color-text);
+}
+
+.header[data-state="scrolled"] .nav a:hover,
+.header[data-state="scrolled"] .nav a[aria-current="true"] {
+  color: var(--color-accent);
+}
+
+.header[data-state="scrolled"] .menu-toggle span {
+  background-color: var(--color-text);
+}
+
+/* Header slides out of view when scrolling down */
 .header[data-state="hidden"] {
   transform: translateY(-100%);
+  transition: transform var(--transition-slow), background-color var(--transition-slow), box-shadow var(--transition-slow), color var(--transition-slow);
+}
+
+/* Hero sentinel — invisible position marker for IntersectionObserver */
+.hero-sentinel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
 }

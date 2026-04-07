@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+  <!-- ============================================================ -->
+  <!-- META — charset (must be first) and viewport                  -->
+  <!-- ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================================================ -->
+  <!-- TITLE and META DESCRIPTION                                   -->
+  <!-- D-07: exact title format, D-08: warm/inviting tone           -->
+  <!-- ============================================================ -->
+  <title>Ristorante Paganini | Italienisches Restaurant Leipzig</title>
+
+  <!-- EDIT: Replace XXXXXXXX with real phone number before launch -->
+  <meta name="description" content="Erleben Sie authentische italienische Küche im Herzen von Leipzig. Ristorante Paganini — familiengeführt, mit Leidenschaft für Qualität und Gastfreundschaft seit Generationen. Tisch reservieren: +49 341 XXXXXXXX">
+
+  <!-- ============================================================ -->
+  <!-- CANONICAL                                                    -->
+  <!-- D-13: canonical points to self (DE page)                     -->
+  <!-- ============================================================ -->
+  <!-- PLACEHOLDER: Replace example.com with real domain before launch -->
+  <link rel="canonical" href="https://www.example.com/de/">
+
+  <!-- ============================================================ -->
+  <!-- HREFLANG — reciprocal cluster (D-12, D-14, SEO-03)           -->
+  <!-- All 4 tags required: de, en, it, x-default                   -->
+  <!-- ============================================================ -->
+  <!-- PLACEHOLDER: Replace example.com with real domain in all alternate lang URLs before launch -->
+  <link rel="alternate" hreflang="de" href="https://www.example.com/de/">
+  <link rel="alternate" hreflang="en" href="https://www.example.com/en/">
+  <link rel="alternate" hreflang="it" href="https://www.example.com/it/">
+  <link rel="alternate" hreflang="x-default" href="https://www.example.com/de/">
+
+  <!-- ============================================================ -->
+  <!-- OPEN GRAPH (D-09, D-10, SEO-02)                              -->
+  <!-- ============================================================ -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Ristorante Paganini">
+  <meta property="og:title" content="Ristorante Paganini | Italienisches Restaurant Leipzig">
+  <meta property="og:description" content="Erleben Sie authentische italienische Küche im Herzen von Leipzig. Ristorante Paganini — familiengeführt, mit Leidenschaft für Qualität und Gastfreundschaft seit Generationen. Tisch reservieren: +49 341 XXXXXXXX">
+  <meta property="og:url" content="https://www.example.com/de/">
+  <meta property="og:image" content="https://www.example.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- PLACEHOLDER: Replace example.com with real domain before launch -->
+  <!-- PLACEHOLDER: Replace og-image.jpg with real photography before launch -->
+
+  <!-- ============================================================ -->
+  <!-- TWITTER CARD (D-11, SEO-02)                                  -->
+  <!-- ============================================================ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ristorante Paganini | Italienisches Restaurant Leipzig">
+  <meta name="twitter:description" content="Erleben Sie authentische italienische Küche im Herzen von Leipzig. Ristorante Paganini — familiengeführt, mit Leidenschaft für Qualität und Gastfreundschaft seit Generationen. Tisch reservieren: +49 341 XXXXXXXX">
+  <meta name="twitter:image" content="https://www.example.com/assets/img/og-image.jpg">
+  <!-- PLACEHOLDER: Replace example.com and og-image.jpg before launch -->
+
+  <!-- ============================================================ -->
+  <!-- FAVICON SET — SEO-09                                         -->
+  <!-- Evil Martians 4-tag approach (svg + ico + apple + manifest)  -->
+  <!-- Paths relative from /de/ — all assets in ../assets/          -->
+  <!-- ============================================================ -->
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="manifest" href="../assets/site.webmanifest">
+
+  <!-- ============================================================ -->
+  <!-- STYLESHEET — single file, no @import, no CDN                 -->
+  <!-- ============================================================ -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+
+  <!-- ============================================================ -->
+  <!-- STRUCTURED DATA (JSON-LD)                                    -->
+  <!-- D-03, D-04, D-06, SEO-04: Restaurant + LocalBusiness schema  -->
+  <!-- FAQ schema deferred to Phase 4 (D-05)                        -->
+  <!-- ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Restaurant", "LocalBusiness"],
+    "name": "Ristorante Paganini",
+    "description": "Authentisches italienisches Restaurant in der Leipziger Innenstadt. Familiengeführt seit Generationen.",
+    "url": "https://www.example.com/de/",
+    "telephone": "+49 341 XXXXXXXX",
+    "servesCuisine": "Italian",
+    "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, Credit Card",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Grosse Fleischergasse",
+      "addressLocality": "Leipzig",
+      "postalCode": "04109",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.3397,
+      "longitude": 12.3731
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "11:30",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "12:00",
+        "closes": "22:00"
+      }
+    ],
+    "image": "https://www.example.com/assets/img/og-image.jpg",
+    "inLanguage": "de"
+  }
+  </script>
+  <!-- EDIT: telephone — replace XXXXXXXX with real number before launch -->
+  <!-- EDIT: openingHoursSpecification — confirm actual hours with owner before launch -->
+  <!-- PLACEHOLDER: Replace example.com and og-image.jpg with real values before launch -->
+  <!-- SYNC: Update this JSON-LD block in en/ and it/ when translating in Phase 5 -->
+
+  <!-- ============================================================ -->
+  <!-- JAVASCRIPT — deferred, non-blocking                          -->
+  <!-- ============================================================ -->
+  <script src="../assets/js/main.js" defer></script>
+
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- HEADER — sticky site navigation                              -->
+  <!-- JS hooks: id="site-header", id="menu-toggle"                 -->
+  <!-- ============================================================ -->
+  <header class="header" id="site-header">
+    <a href="#hero" class="font-heading" style="font-size: 1.5rem; text-decoration: none; color: var(--color-accent); font-weight: 700;">
+      Ristorante Paganini
+    </a>
+
+    <nav>
+      <!-- EDITABLE: Desktop nav links — update anchor text and add/remove links as needed -->
+      <ul class="nav" role="list">
+        <li><a href="#hero">Start</a></li>
+        <li><a href="#about">Über uns</a></li>
+        <li><a href="#menu">Speisekarte</a></li>
+        <li><a href="#lunch">Mittagstisch</a></li>
+        <li><a href="#reservation">Reservierung</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <button type="button" class="menu-toggle" id="menu-toggle"
+            aria-expanded="false" aria-controls="mobile-menu"
+            aria-label="Navigation öffnen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- MOBILE MENU — full-screen overlay navigation                 -->
+  <!-- JS hooks: id="mobile-menu", class="mobile-menu-close"        -->
+  <!-- ============================================================ -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation">
+    <button type="button" class="mobile-menu-close" aria-label="Navigation schließen">Schließen</button>
+    <!-- EDITABLE: Mobile nav links — update anchor text and add/remove links as needed -->
+    <a href="#hero">Start</a>
+    <a href="#info">Öffnungszeiten</a>
+    <a href="#about">Über uns</a>
+    <a href="#menu">Speisekarte</a>
+    <a href="#lunch">Mittagstisch</a>
+    <a href="#gallery">Galerie</a>
+    <a href="#reservation">Reservierung</a>
+    <a href="#events">Veranstaltungen</a>
+    <a href="#location">Anfahrt</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Kontakt</a>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- MAIN CONTENT — 11 sections                                   -->
+  <!-- All section IDs are language-neutral English (D-01, D-02)    -->
+  <!-- ============================================================ -->
+  <main>
+
+    <!-- SECT-01: Hero -->
+    <section class="hero" id="hero">
+      <!-- EDITABLE: Hero image, heading, subheadline, and CTA buttons added in Phase 4 -->
+      <h1><!-- EDITABLE: Restaurant name heading — filled in Phase 4 --></h1>
+      <div class="hero-sentinel" aria-hidden="true"></div>
+    </section>
+
+    <!-- SECT-02: Quick Info Bar -->
+    <section id="info">
+      <!-- EDITABLE: Quick info bar — opening hours, address, phone, CTA — added in Phase 4 -->
+    </section>
+
+    <!-- SECT-03: About / Philosophy -->
+    <section id="about">
+      <!-- EDITABLE: About section — family story, Italian identity, quality promise — added in Phase 4 -->
+    </section>
+
+    <!-- SECT-04: Menu Overview -->
+    <section id="menu">
+      <!-- EDITABLE: Menu overview — pasta, pizza, antipasti, wine, CTA, PDF link — added in Phase 4 -->
+    </section>
+
+    <!-- SECT-05: Business Lunch -->
+    <section id="lunch">
+      <!-- EDITABLE: Business lunch — monthly-updatable, 11:30–14:30, PDF link — added in Phase 4 -->
+    </section>
+
+    <!-- SECT-06: Gallery -->
+    <section id="gallery">
+      <!-- EDITABLE: Gallery — interior, food, terrace, exterior image grid — added in Phase 4 -->
+    </section>
+
+    <!-- SECT-07: Reservation -->
+    <section id="reservation">
+      <!-- EDITABLE: Reservation — external tool embed placeholder, phone fallback — added in Phase 4 -->
+    </section>
+
+    <!-- SECT-08: Groups / Events -->
+    <section id="events">
+      <!-- EDITABLE: Groups and events — inquiry CTA, trust copy — added in Phase 4 -->
+    </section>
+
+    <!-- SECT-09: Location -->
+    <section id="location">
+      <!-- EDITABLE: Location — address, map placeholder, parking info — added in Phase 4 -->
+    </section>
+
+    <!-- SECT-10: FAQ -->
+    <section id="faq">
+      <!-- EDITABLE: FAQ — 7 SEO-relevant questions and FAQ schema — added in Phase 4 -->
+    </section>
+
+    <!-- SECT-11: Contact -->
+    <section id="contact">
+      <!-- EDITABLE: Contact — phone, email, address, hours, Instagram — added in Phase 4 -->
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER — SECT-12                                             -->
+  <!-- ============================================================ -->
+  <footer id="footer">
+    <!-- EDITABLE: Footer — legal links, language switcher, contact summary, copyright — added in Phase 4 -->
+  </footer>
+
+</body>
+</html>

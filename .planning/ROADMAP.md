@@ -51,8 +51,8 @@ Plans:
   5. Favicon files (SVG, ICO, apple-touch-icon, webmanifest) exist in assets/ and are correctly referenced, and AVIF/WebP/JPEG source image sets are organized in assets/img/ ready for use in picture elements
 **Plans:** 2 plans
 Plans:
-- [ ] 02-01-PLAN.md — JS behaviors (sticky header, mobile menu) + CSS state hooks + test harness
-- [ ] 02-02-PLAN.md — Favicon set (SVG, ICO, PNG, webmanifest) + SVG placeholder images
+- [x] 02-01-PLAN.md — JS behaviors (sticky header, mobile menu) + CSS state hooks + test harness
+- [x] 02-02-PLAN.md — Favicon set (SVG, ICO, PNG, webmanifest) + SVG placeholder images
 **UI hint**: yes
 
 ### Phase 3: German Onepage — Head and SEO Skeleton

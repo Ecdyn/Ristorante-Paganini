@@ -49,7 +49,10 @@ Plans:
   3. Smooth anchor scrolling works and anchored sections land with the correct scroll-padding-top offset so the sticky header never obscures the section heading
   4. assets/js/main.js loads with the defer attribute, contains no inline script blocks, and causes zero render-blocking measured by a Lighthouse test on any page
   5. Favicon files (SVG, ICO, apple-touch-icon, webmanifest) exist in assets/ and are correctly referenced, and AVIF/WebP/JPEG source image sets are organized in assets/img/ ready for use in picture elements
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 02-01-PLAN.md — JS behaviors (sticky header, mobile menu) + CSS state hooks + test harness
+- [ ] 02-02-PLAN.md — Favicon set (SVG, ICO, PNG, webmanifest) + SVG placeholder images
 **UI hint**: yes
 
 ### Phase 3: German Onepage — Head and SEO Skeleton
@@ -133,7 +136,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. CSS Design System | 0/2 | Planning complete | - |
-| 2. JS and Asset Foundation | 0/TBD | Not started | - |
+| 2. JS and Asset Foundation | 0/2 | Planning complete | - |
 | 3. German Onepage — Head and SEO Skeleton | 0/TBD | Not started | - |
 | 4. German Onepage — All 12 Content Sections | 0/TBD | Not started | - |
 | 5. English and Italian Onepages | 0/TBD | Not started | - |

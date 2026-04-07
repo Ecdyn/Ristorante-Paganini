@@ -63,9 +63,10 @@ All tokens defined in `:root` of `assets/css/main.css`. Declarations below are t
 |------|-------------|---------------|------|--------|-------------|
 | Display / H1 | `--font-size-display` | clamp(40px, 6vw, 72px) | Cormorant Garamond | 400 (normal) | 1.15 |
 | Heading / H2 | `--font-size-heading-lg` | clamp(26px, 3vw, 32px) | Cormorant Garamond | 400 (normal) | 1.2 |
-| Subheading / H3 | `--font-size-heading-sm` | 22px (1.375rem) | Cormorant Garamond | 400 (normal) | 1.25 |
 | Body | 1rem | 16px | Lato | 400 (normal) | 1.6 |
 | Small / Caption | `--font-size-sm` | 14px (0.875rem) | Lato | 400 (normal) | 1.5 |
+
+H3 elements are NOT a distinct size token. H3 renders at 16px (body size, 1rem) using Cormorant Garamond — the typeface distinction from body text (Lato) provides sufficient visual hierarchy without a fifth size. The CSS variable `--font-size-heading-sm` (22px) is NOT used for H3 in Phase 4 content; any existing references to it for H3 must be replaced with `font-size: 1rem; font-family: var(--font-heading)`.
 
 Font weights available: 400 (`--font-weight-normal`) and 700 (`--font-weight-bold`). No other weights.
 
@@ -148,7 +149,7 @@ Image dimensions: desktop 1400x800, mobile 768x500. Use `sizes="(max-width: 768p
 - Layout: `.content-wrapper` (max 800px) for text, centered
 - Heading (H2): "Unsere Geschichte" — styled per global H2 rule (uppercase, letter-spacing, underline)
 - Body: 3 short paragraphs, Lato 16px, `--line-height-base` 1.6, `--color-text`
-- Optional: pull-quote in Cormorant Garamond italic, `--font-size-heading-sm`, `--color-text-muted`, left border in `--color-accent` (2px solid)
+- Optional: pull-quote in Cormorant Garamond italic, 16px (body size — typeface alone provides distinction), `--color-text-muted`, left border in `--color-accent` (2px solid)
 
 ### #menu — Menu Overview Section
 
@@ -156,7 +157,7 @@ Image dimensions: desktop 1400x800, mobile 768x500. Use `sizes="(max-width: 768p
 - Heading (H2): "Unsere Speisekarte"
 - Layout: `.grid[data-layout="quarters"]` on desktop, stacks to 2-col at tablet, 1-col at mobile
 - 4 category cards (Pasta, Pizza, Antipasti, Wein):
-  - Card structure: heading (H3, Cormorant Garamond), 3-4 dish names (Lato, 16px), short descriptions (Lato, `--font-size-sm`, `--color-text-muted`)
+  - Card structure: heading (H3, Cormorant Garamond 16px — typeface distinction from body Lato), 3-4 dish names (Lato, 16px), short descriptions (Lato, `--font-size-sm`, `--color-text-muted`)
   - Card visual: white background (`--color-surface`), `--shadow-sm`, `--radius-md`, `--space-6` internal padding
   - No prices — copy direction from CONTEXT.md D-07
 - CTA cluster below cards: "Speisekarte herunterladen" (`.btn[data-variant="primary"]`, `href` to placeholder PDF) + "Vollständige Speisekarte" (`.btn[data-variant="secondary"]`)
@@ -167,7 +168,7 @@ Image dimensions: desktop 1400x800, mobile 768x500. Use `sizes="(max-width: 768p
 - Heading (H2): "Mittagstisch"
 - Hours: "11:30 – 14:30 Uhr" — Cormorant Garamond, `--font-size-heading-lg`, `--color-accent`, prominent
 - 3-4 highlight slots in a flow list — each with:
-  - Course label (H3): "Vorspeise" / "Pasta" / "Hauptgericht" / "Dessert"
+  - Course label (H3): "Vorspeise" / "Pasta" / "Hauptgericht" / "Dessert" — Cormorant Garamond, 16px (body size — typeface provides visual distinction from Lato body copy)
   - Dish name: Lato bold (700), 16px, with `<!-- EDIT: update monthly -->` comment
   - Short description: Lato, `--font-size-sm`, `--color-text-muted`
 - Status/holiday note area: Lato, `--font-size-sm`, italic, `--color-text-muted`, with `<!-- EDIT: update for holidays/closures -->`
@@ -216,8 +217,8 @@ Image dimensions: desktop 1400x800, mobile 768x500. Use `sizes="(max-width: 768p
 - Section background: `--color-surface-alt` (`.section--alt`)
 - Heading (H2): "Häufig gestellte Fragen"
 - 7 Q&A pairs per CONTEXT.md D-18 (exact questions listed there)
-- Markup pattern: `<dl>` with `<dt>` (question, H3 weight, Cormorant Garamond) and `<dd>` (answer, Lato 16px, `--color-text`, `--space-4` margin-bottom)
-- Alternatively: `<details>`/`<summary>` if accordion behavior is desired — executor decides based on simplicity. If `<details>`, `<summary>` uses H3 styling.
+- Markup pattern: `<dl>` with `<dt>` (question, Cormorant Garamond 16px — typeface distinction from answer text) and `<dd>` (answer, Lato 16px, `--color-text`, `--space-4` margin-bottom)
+- Alternatively: `<details>`/`<summary>` if accordion behavior is desired — executor decides based on simplicity. If `<details>`, `<summary>` uses Cormorant Garamond 16px styling.
 - FAQPage JSON-LD added to `<head>` — all 7 Q&A pairs must match HTML content exactly
 
 ### #contact — Contact Section
@@ -226,7 +227,7 @@ Image dimensions: desktop 1400x800, mobile 768x500. Use `sizes="(max-width: 768p
 - Heading (H2): "Kontakt"
 - Layout: `.grid[data-layout="halves"]` on desktop, stacked on mobile
 - Left column: phone (as `<a href="tel:...">` with `--color-accent`), email (as `<a href="mailto:...">`), address block
-- Right column: opening hours table (Mon-Sun, Cormorant Garamond for day labels), Instagram link (placeholder `#`, opens in new tab, `rel="noopener noreferrer"`)
+- Right column: opening hours table (Mon-Sun, Cormorant Garamond 16px for day labels), Instagram link (placeholder `#`, opens in new tab, `rel="noopener noreferrer"`)
 - No contact form — phone + email direct links only
 
 ### #footer — Footer Section
@@ -388,6 +389,8 @@ The following blocks do not exist yet and must be added to `assets/css/main.css`
 13. `.info-bar` — quick info strip layout (dark bg, horizontal cluster)
 14. `.faq-list` — `<dl>` or `<details>` list spacing
 15. `.section-label` — brand mark above H1, small caps treatment
+
+H3 elements within new blocks must use: `font-family: var(--font-heading); font-size: 1rem; font-weight: var(--font-weight-normal)` — no reference to `--font-size-heading-sm`.
 
 All new CSS appended to Section 5 (BLOCKS) of `assets/css/main.css`, following existing naming conventions.
 

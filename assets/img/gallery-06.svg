@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#F5EDEE" stroke="#DFD0D2" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="400" y="290" font-family="Lato, sans-serif" font-size="18" fill="#6B5557"
+        text-anchor="middle" dominant-baseline="middle">Gallery 6 — Wine — 800x600</text>
+  <text x="400" y="315" font-family="Lato, sans-serif" font-size="13" fill="#6B5557"
+        text-anchor="middle" dominant-baseline="middle">PLACEHOLDER: Replace with real photography before launch</text>
+</svg>

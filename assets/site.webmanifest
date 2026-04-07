@@ -1,0 +1,10 @@
+{
+  "name": "Ristorante Paganini",
+  "short_name": "Paganini",
+  "icons": [
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "theme_color": "#7A2D3A",
+  "background_color": "#7A2D3A",
+  "display": "browser"
+}

@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CSS Design System Test — Ristorante Paganini</title>
+  <title>CSS + JS Test — Ristorante Paganini</title>
   <link rel="stylesheet" href="main.css">
+  <script src="../js/main.js" defer></script>
   <style>
     /* Test-page-only overrides — placeholder backgrounds for sections without real images */
     .hero {
@@ -28,7 +29,7 @@
   <!-- ============================================================ -->
   <!-- BLOCK: .header — sticky site navigation                      -->
   <!-- ============================================================ -->
-  <header class="header">
+  <header class="header" id="site-header">
     <a href="#" class="font-heading" style="font-size: 1.5rem; text-decoration: none; color: var(--color-accent); font-weight: 700;">
       Ristorante Paganini
     </a>
@@ -44,7 +45,27 @@
 
     <!-- Visually hidden text example -->
     <span class="visually-hidden">Navigationsmenü</span>
+
+    <button type="button" class="menu-toggle" id="menu-toggle"
+            aria-expanded="false" aria-controls="mobile-menu"
+            aria-label="Navigation oeffnen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
+
+  <!-- ============================================================ -->
+  <!-- BLOCK: .mobile-menu — full-screen overlay navigation         -->
+  <!-- ============================================================ -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation">
+    <button type="button" class="mobile-menu-close" aria-label="Navigation schliessen">Schliessen</button>
+    <a href="#hero">Start</a>
+    <a href="#about">Ueber uns</a>
+    <a href="#menu">Speisekarte</a>
+    <a href="#reservierung">Reservierung</a>
+    <a href="#section-dark">Kontakt</a>
+  </div>
 
   <!-- ============================================================ -->
   <!-- BLOCK: .hero — full-viewport hero section                    -->
@@ -60,6 +81,8 @@
         <a href="#menu" class="btn" data-variant="secondary">Speisekarte ansehen</a>
       </div>
     </div>
+    <span class="test-label" style="position:absolute;bottom:2rem;left:1rem;z-index:10;">hero-sentinel element is at bottom of this section</span>
+    <div class="hero-sentinel" aria-hidden="true"></div>
   </section>
 
   <!-- ============================================================ -->

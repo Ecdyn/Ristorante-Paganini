@@ -64,7 +64,9 @@ Plans:
   2. The hreflang block contains all four tags (hreflang="de", hreflang="en", hreflang="it", hreflang="x-default") using absolute URLs, and the self-canonical tag points to the DE URL — not any other language version
   3. OG and Twitter card tags are present with correct og:locale="de_DE", og:type="restaurant", and a placeholder og:image path that resolves to a real file in assets/img/og/
   4. The HTML document has exactly one H1 element in the skeleton markup, lang="de" on the html element, and all 12 section anchor IDs (language-neutral: #menu, #lunch, #location, etc.) defined as empty section elements ready for content
-**Plans**: TBD
+**Plans:** 1 plan
+Plans:
+- [ ] 03-01-PLAN.md — Complete de/index.html with head (meta, hreflang, JSON-LD, OG, Twitter, favicon, CSS/JS) and body skeleton (header/nav, 12 sections, footer)
 
 ### Phase 4: German Onepage — All 12 Content Sections
 **Goal**: /de/index.html is a complete, fully-functional German restaurant page that a real visitor can use — every section has its content, every CTA works, every image loads correctly, and the page passes Core Web Vitals
@@ -137,7 +139,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 |-------|----------------|--------|-----------|
 | 1. CSS Design System | 0/2 | Planning complete | - |
 | 2. JS and Asset Foundation | 0/2 | Planning complete | - |
-| 3. German Onepage — Head and SEO Skeleton | 0/TBD | Not started | - |
+| 3. German Onepage — Head and SEO Skeleton | 0/1 | Planning complete | - |
 | 4. German Onepage — All 12 Content Sections | 0/TBD | Not started | - |
 | 5. English and Italian Onepages | 0/TBD | Not started | - |
 | 6. Legal Pages | 0/TBD | Not started | - |

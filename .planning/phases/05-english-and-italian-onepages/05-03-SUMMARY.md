@@ -1,35 +1,30 @@
 ---
 phase: 05-english-and-italian-onepages
 plan: 03
-subsystem: localization/seo
-tags: [hreflang, validation, cross-validation, localization, seo]
+subsystem: localization/verification
+tags: [hreflang, cross-validation, localization, seo, multilingual]
 dependency_graph:
   requires:
-    - de/index.html (verified hreflang cluster head)
-    - en/index.html (verified English localized page)
-    - it/index.html (verified Italian localized page)
+    - de/index.html (verified hreflang + footer)
+    - en/index.html (cross-validated for German remnants)
+    - it/index.html (cross-validated for German and English remnants)
   provides:
-    - hreflang reciprocal cluster: all three language files verified correct
-    - Zero German remnants in EN/IT pages confirmed
+    - Verified complete hreflang reciprocal cluster across all 3 language files
   affects:
-    - SEO hreflang cluster integrity (all three pages verified)
+    - SEO multilingual indexing (hreflang cluster integrity)
 tech_stack:
   added: []
   patterns:
-    - hreflang reciprocal 4-tag cluster (de, en, it, x-default) on all three pages
-    - Self-canonical per language directory
-    - aria-current on active language in footer switcher
-    - FAQPage JSON-LD synchronized with visible HTML dt text
+    - hreflang reciprocal 4-tag cluster verified across 3 files (12 total tags)
+    - Cross-language contamination grep scan
 key_files:
   created: []
   modified: []
 decisions:
-  - "DE hreflang and footer were already correct from Phase 3/4 — no changes needed"
-  - "EN and IT hreflang clusters were already correct from Phase 5 plans 01/02"
-  - "speisekarte.pdf href is a shared PDF filename (correct) — not a German UI string violation"
-  - "All 12 section IDs identical across all three language files (language-neutral anchors)"
+  - "PDF filenames (speisekarte.pdf, mittagskarte.pdf) in href attributes are acceptable German -- they are file paths, not visible text"
+  - "datenschutz.html filename in href is acceptable -- visible link text is translated (Privacy Policy / Privacy)"
 metrics:
-  duration_minutes: 8
+  duration_minutes: 2
   completed_date: "2026-04-08"
   tasks_completed: 3
   tasks_total: 3
@@ -40,125 +35,100 @@ requirements:
   - LANG-03
 ---
 
-# Phase 05 Plan 03: Hreflang Cross-Validation Summary
+# Phase 05 Plan 03: Cross-Language Verification Summary
 
-**One-liner:** Full hreflang reciprocal cluster verified across all three language pages — each page carries 4 tags (de, en, it, x-default), correct self-canonicals, zero German strings in EN/IT, zero cross-contamination, and correct language switcher aria-current.
+**One-liner:** Verified complete hreflang reciprocal cluster across DE/EN/IT with zero German remnants in translated pages, zero cross-contamination, correct self-canonicals, 12 section IDs per file, and working language switchers.
 
 ## Tasks Completed
 
 | Task | Name | Commit | Files |
 |------|------|--------|-------|
-| 1 | Verify DE page hreflang and footer | (verification only) | de/index.html — no changes needed |
-| 2 | Cross-validate all three pages for hreflang reciprocity and translation completeness | (verification only) | en/index.html, it/index.html — no changes needed |
-| 3 | Visual verification checkpoint (auto-approved) | (checkpoint) | — |
+| 1 | Verify DE page hreflang and fix footer if needed | n/a (verification-only, no changes needed) | de/index.html (verified) |
+| 2 | Cross-validate all three pages for hreflang reciprocity and translation completeness | n/a (verification-only, no changes needed) | de/index.html, en/index.html, it/index.html (verified) |
+| 3 | Visual verification of EN and IT pages | auto-approved | n/a |
 
 ## Verification Results
 
-### Task 1: DE Page Verification
+### 1. Hreflang Reciprocity (12/12 tags confirmed)
 
-| Check | Result |
-|-------|--------|
-| hreflang="de" tag present | PASS — 1 match |
-| hreflang="en" tag present | PASS — 1 match |
-| hreflang="it" tag present | PASS — 1 match |
-| hreflang="x-default" tag present | PASS — 1 match |
-| Total hreflang tags = 4 | PASS |
-| Canonical href contains /de/ | PASS — https://www.example.com/de/ |
-| Footer aria-current on DE link | PASS — line 734 |
-| Footer links to /en/ and /it/ | PASS — lines 735-736 |
-| Legal links: /de/impressum.html and /de/datenschutz.html | PASS — lines 727-728 |
+| File | hreflang=de | hreflang=en | hreflang=it | hreflang=x-default |
+|------|:-----------:|:-----------:|:-----------:|:------------------:|
+| de/index.html | PASS | PASS | PASS | PASS |
+| en/index.html | PASS | PASS | PASS | PASS |
+| it/index.html | PASS | PASS | PASS | PASS |
 
-### Task 2: Cross-Validation Results
+### 2. Self-Canonical
 
-#### Hreflang Reciprocity
-
-| File | hreflang count | de tag | en tag | it tag | x-default |
-|------|---------------|--------|--------|--------|-----------|
-| de/index.html | 4 | PASS | PASS | PASS | PASS |
-| en/index.html | 4 | PASS | PASS | PASS | PASS |
-| it/index.html | 4 | PASS | PASS | PASS | PASS |
-
-#### Self-Canonical Check
-
-| File | Canonical | Result |
-|------|-----------|--------|
+| File | Canonical URL | Status |
+|------|--------------|--------|
 | de/index.html | https://www.example.com/de/ | PASS |
 | en/index.html | https://www.example.com/en/ | PASS |
 | it/index.html | https://www.example.com/it/ | PASS |
 
-#### German Remnant Check
+### 3. German Remnant Scan (EN page)
 
-| Check | EN page | IT page |
-|-------|---------|---------|
-| German visible UI strings (nav, headings, buttons, copyright) | 0 matches | 0 matches |
-| Note: `speisekarte.pdf` in href attributes | false positive — shared PDF filename, visible text is English/Italian | false positive |
+Scanned for 25+ German UI strings (Italienisches, Uber uns, Speisekarte, Mittagstisch, Reservierung, Veranstaltungen, Anfahrt, Offnungszeiten, Alle Rechte vorbehalten, Rechtliches, Sprache, Haufig gestellte, Unsere Geschichte, So finden Sie uns, Tisch reservieren, Impressionen, Rufen Sie uns an, Jetzt anrufen, E-Mail schreiben, Navigation schliessen, Navigation offnen, Bildergalerie, Galerie schliessen, Vorheriges Bild, Nachstes Bild).
 
-#### Cross-Contamination Check
+**Result:** 2 matches -- both are PDF filename references in href attributes (`speisekarte.pdf`), not visible text. Visible link text is correctly translated to "Download Menu" and "Full Menu". **PASS.**
 
-| Check | IT page |
-|-------|---------|
-| EN-only strings (About Us, Our Story, All rights reserved, etc.) | 0 matches |
+### 4. German Remnant Scan (IT page)
 
-#### Section IDs (12 required)
+Same scan as above. **Result:** 2 matches -- same PDF filename references (`speisekarte.pdf`) in href. Visible text is "Scarica il Menu" and "Menu Completo". **PASS.**
 
-| File | Count | IDs |
-|------|-------|-----|
-| en/index.html | 12 | hero, info, about, menu, lunch, gallery, reservation, events, location, faq, contact, footer |
-| it/index.html | 12 | hero, info, about, menu, lunch, gallery, reservation, events, location, faq, contact, footer |
+### 5. Cross-Contamination (English strings in IT)
 
-#### Asset Path Integrity
+Scanned for: About Us, Our Story, Our Menu, Reserve a Table, Getting Here, Frequently Asked Questions, All rights reserved, Close navigation, Open navigation, Image gallery, Close gallery, Previous image, Next image.
 
-| File | ../assets/css/main.css | ../assets/js/main.js |
-|------|------------------------|----------------------|
-| en/index.html | PASS | PASS |
-| it/index.html | PASS | PASS |
+**Result:** 0 matches. **PASS.**
 
-#### Language Switcher aria-current
+### 6. Section IDs
 
-| File | Active link | aria-current |
-|------|-------------|-------------|
-| de/index.html | DE (line 734) | PASS |
-| en/index.html | EN (line 735) | PASS |
-| it/index.html | IT (line 735) | PASS |
+All three files have exactly 12 section IDs: hero, info, about, menu, lunch, gallery, reservation, events, location, faq, contact, footer. **PASS.**
 
-#### FAQPage JSON-LD Sync
+### 7. Asset Path Integrity
 
-| File | First JSON-LD question | First dt text | Match |
-|------|----------------------|---------------|-------|
+EN and IT both contain `../assets/css/main.css` and `../assets/js/main.js`. **PASS.**
+
+### 8. Footer Language Switcher
+
+| File | Active Link | aria-current="true" on correct link |
+|------|-------------|--------------------------------------|
+| de/index.html | DE | PASS |
+| en/index.html | EN | PASS |
+| it/index.html | IT | PASS |
+
+### 9. FAQPage JSON-LD Sync
+
+| File | First FAQ (JSON-LD name) | First FAQ (HTML dt) | Match |
+|------|--------------------------|---------------------|-------|
 | en/index.html | "Do I need a reservation?" | "Do I need a reservation?" | PASS |
 | it/index.html | "Devo prenotare?" | "Devo prenotare?" | PASS |
 
-### Task 3: Visual Verification
+### 10. Footer Content Verification
 
-Auto-approved checkpoint (--auto mode). All programmatic checks passed.
+| File | Legal Heading | Language Heading | Legal Links |
+|------|--------------|-----------------|-------------|
+| de/index.html | Rechtliches | Sprache | /de/impressum.html, /de/datenschutz.html |
+| en/index.html | Legal | Language | /en/impressum.html, /en/datenschutz.html |
+| it/index.html | Note Legali | Lingua | /it/impressum.html, /it/datenschutz.html |
 
 ## Deviations from Plan
 
-None — plan executed exactly as written. All three language files were already correct from prior phase execution. No files required modification.
+None -- all verification checks passed without requiring any fixes. Plan executed exactly as written.
 
 ## Known Stubs
 
-No new stubs introduced in this plan. Pre-existing stubs documented in 05-01-SUMMARY.md and 05-02-SUMMARY.md remain unchanged.
+No new stubs introduced. Pre-existing stubs (placeholder phone, email, domain, PDF paths, reservation widget) documented in 05-01-SUMMARY.md and 05-02-SUMMARY.md remain unchanged.
 
 ## Threat Flags
 
-None — verification-only plan. No new network endpoints, auth paths, file access patterns, or schema changes introduced.
-
-| Threat ID | Status | Notes |
-|-----------|--------|-------|
-| T-05-05: hreflang reciprocal cluster | MITIGATED | All 12 hreflang tags verified across 3 files (4 per file) |
-| T-05-06: Leftover German strings in EN/IT | MITIGATED | Zero German visible UI strings in EN or IT pages confirmed |
+None -- verification-only plan with no new files or endpoints created.
 
 ## Self-Check: PASSED
 
-- [x] Tasks 1 and 2 completed: verification confirmed, no changes needed
-- [x] Task 3 auto-approved (--auto mode)
-- [x] All 3 files have 4 hreflang tags each (12 total)
-- [x] All 3 files have correct self-canonical
-- [x] Zero German UI strings in EN and IT visible content
-- [x] Zero EN strings in IT page
-- [x] 12 section IDs in all three files
-- [x] Correct aria-current on each file's language switcher
-- [x] FAQPage JSON-LD matches visible dt text in EN and IT
-- [x] Asset paths intact in EN and IT
-- [x] SUMMARY.md created at correct path
+- [x] de/index.html verified: 4 hreflang tags, correct canonical, correct footer
+- [x] en/index.html verified: 4 hreflang tags, correct canonical, zero German visible text, EN active
+- [x] it/index.html verified: 4 hreflang tags, correct canonical, zero German visible text, zero English cross-contamination, IT active
+- [x] All 12 section IDs present in each file
+- [x] FAQPage JSON-LD matches visible HTML in EN and IT
+- [x] No files modified (verification-only plan)

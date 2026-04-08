@@ -12,11 +12,7 @@ Visitors instantly trust Ristorante Paganini as an authentic, premium Italian re
 
 ### Validated
 
-- [x] CSS design system with locked tokens, self-hosted fonts, responsive foundation (Phase 1)
-- [x] JS behaviors (sticky header, mobile menu, smooth scroll) + favicon/asset foundation (Phase 2)
-- [x] German onepage head with meta, hreflang skeleton, JSON-LD, canonical wiring (Phase 3)
-- [x] German onepage with all 12 content sections, CTAs, images, FAQPage schema (Phase 4)
-- [x] English and Italian onepages with complete hreflang reciprocal cluster (Phase 5)
+(None yet — ship to validate)
 
 ### Active
 
@@ -113,4 +109,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-08 after Phase 5 completion*
+*Last updated: 2026-04-06 after initialization*

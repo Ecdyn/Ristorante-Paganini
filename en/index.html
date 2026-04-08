@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- ============================================================ -->
+  <!-- META — charset (must be first) and viewport                  -->
+  <!-- ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================================================ -->
+  <!-- TITLE and META DESCRIPTION                                   -->
+  <!-- D-07: exact title format, D-08: warm/inviting tone           -->
+  <!-- ============================================================ -->
+  <title>Ristorante Paganini | Italian Restaurant Leipzig</title>
+
+  <!-- EDIT: Replace XXXXXXXX with real phone number before launch -->
+  <meta name="description" content="Experience authentic Italian cuisine in the heart of Leipzig. Ristorante Paganini — family-run, with a passion for quality and hospitality for generations. Reserve a table: +49 341 XXXXXXXX">
+
+  <!-- ============================================================ -->
+  <!-- CANONICAL                                                    -->
+  <!-- D-15: canonical points to self (EN page)                     -->
+  <!-- ============================================================ -->
+  <!-- PLACEHOLDER: Replace example.com with real domain before launch -->
+  <link rel="canonical" href="https://www.example.com/en/">
+
+  <!-- ============================================================ -->
+  <!-- HREFLANG — reciprocal cluster (D-12, D-14, SEO-03)           -->
+  <!-- All 4 tags required: de, en, it, x-default                   -->
+  <!-- ============================================================ -->
+  <!-- PLACEHOLDER: Replace example.com with real domain in all alternate lang URLs before launch -->
+  <link rel="alternate" hreflang="de" href="https://www.example.com/de/">
+  <link rel="alternate" hreflang="en" href="https://www.example.com/en/">
+  <link rel="alternate" hreflang="it" href="https://www.example.com/it/">
+  <link rel="alternate" hreflang="x-default" href="https://www.example.com/de/">
+
+  <!-- ============================================================ -->
+  <!-- OPEN GRAPH (D-09, D-10, SEO-02)                              -->
+  <!-- ============================================================ -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Ristorante Paganini">
+  <meta property="og:title" content="Ristorante Paganini | Italian Restaurant Leipzig">
+  <meta property="og:description" content="Experience authentic Italian cuisine in the heart of Leipzig. Ristorante Paganini — family-run, with a passion for quality and hospitality for generations. Reserve a table: +49 341 XXXXXXXX">
+  <meta property="og:url" content="https://www.example.com/en/">
+  <meta property="og:image" content="https://www.example.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- PLACEHOLDER: Replace example.com with real domain before launch -->
+  <!-- PLACEHOLDER: Replace og-image.jpg with real photography before launch -->
+
+  <!-- ============================================================ -->
+  <!-- TWITTER CARD (D-11, SEO-02)                                  -->
+  <!-- ============================================================ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ristorante Paganini | Italian Restaurant Leipzig">
+  <meta name="twitter:description" content="Experience authentic Italian cuisine in the heart of Leipzig. Ristorante Paganini — family-run, with a passion for quality and hospitality for generations. Reserve a table: +49 341 XXXXXXXX">
+  <meta name="twitter:image" content="https://www.example.com/assets/img/og-image.jpg">
+  <!-- PLACEHOLDER: Replace example.com and og-image.jpg before launch -->
+
+  <!-- ============================================================ -->
+  <!-- FAVICON SET — SEO-09                                         -->
+  <!-- Evil Martians 4-tag approach (svg + ico + apple + manifest)  -->
+  <!-- Paths relative from /en/ — all assets in ../assets/          -->
+  <!-- ============================================================ -->
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="manifest" href="../assets/site.webmanifest">
+
+  <!-- ============================================================ -->
+  <!-- STYLESHEET — single file, no @import, no CDN                 -->
+  <!-- ============================================================ -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+
+  <!-- ============================================================ -->
+  <!-- STRUCTURED DATA (JSON-LD)                                    -->
+  <!-- D-09: Restaurant + LocalBusiness schema — description and    -->
+  <!-- inLanguage updated for English; all other fields identical   -->
+  <!-- ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Restaurant", "LocalBusiness"],
+    "name": "Ristorante Paganini",
+    "description": "Authentic Italian restaurant in central Leipzig. Family-run for generations.",
+    "url": "https://www.example.com/en/",
+    "telephone": "+49 341 XXXXXXXX",
+    "servesCuisine": "Italian",
+    "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, Credit Card",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Grosse Fleischergasse",
+      "addressLocality": "Leipzig",
+      "postalCode": "04109",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.3397,
+      "longitude": 12.3731
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "11:30",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "12:00",
+        "closes": "22:00"
+      }
+    ],
+    "image": "https://www.example.com/assets/img/og-image.jpg",
+    "inLanguage": "en"
+  }
+  </script>
+  <!-- EDIT: telephone — replace XXXXXXXX with real number before launch -->
+  <!-- EDIT: openingHoursSpecification — confirm actual hours with owner before launch -->
+  <!-- PLACEHOLDER: Replace example.com and og-image.jpg with real values before launch -->
+  <!-- SYNC: Update this JSON-LD block in de/ and it/ when making changes -->
+
+  <!-- ============================================================ -->
+  <!-- STRUCTURED DATA (JSON-LD) — FAQPage                          -->
+  <!-- D-05: 7 FAQ questions — EN translations matching #faq section -->
+  <!-- SYNC: Must match #faq section Q&A text character-for-character -->
+  <!-- ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need a reservation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We recommend a reservation, especially on weekends and public holidays. During the week, tables are often available at short notice. Reserve conveniently by phone at +49 341 XXXXXXXX or use our online reservation system."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you have a business lunch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer a changing business lunch menu Monday to Friday from 11:30 to 14:30. Our lunch menu includes a starter, pasta, main course and dessert — freshly prepared with seasonal ingredients at an attractive price."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I park?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Parking is available close by on Große Fleischergasse and in the Brühl Center car park, just 200 metres away. Further public parking is available throughout Leipzig city centre."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you have vegetarian or vegan dishes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Of course. Our menu offers a selection of vegetarian dishes including pasta, pizza and antipasti. For vegan guests we are happy to adapt our dishes — just ask us."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you have a terrace?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our restaurant has a welcoming terrace right in the heart of Leipzig city centre. In fine weather you can enjoy your meal outdoors — the terrace is open seasonally from spring to autumn."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What payment methods do you accept?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We accept cash and all major credit and debit cards (Visa, Mastercard, EC card). Contactless payment is also available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are dogs welcome?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, well-behaved dogs are very welcome — both inside and on our terrace. We are happy to provide a water bowl."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- SYNC: FAQPage JSON-LD must match #faq section Q&A text exactly — update both together -->
+
+  <!-- ============================================================ -->
+  <!-- JAVASCRIPT — deferred, non-blocking                          -->
+  <!-- ============================================================ -->
+  <script src="../assets/js/main.js" defer></script>
+
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- HEADER — sticky site navigation                              -->
+  <!-- JS hooks: id="site-header", id="menu-toggle"                 -->
+  <!-- ============================================================ -->
+  <header class="header" id="site-header">
+    <a href="#hero" class="font-heading" style="font-size: 1.5rem; text-decoration: none; color: var(--color-accent); font-weight: 700;">
+      Ristorante Paganini
+    </a>
+
+    <nav>
+      <!-- EDITABLE: Desktop nav links — update anchor text and add/remove links as needed -->
+      <ul class="nav" role="list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#lunch">Business Lunch</a></li>
+        <li><a href="#reservation">Reservations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button type="button" class="menu-toggle" id="menu-toggle"
+            aria-expanded="false" aria-controls="mobile-menu"
+            aria-label="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- MOBILE MENU — full-screen overlay navigation                 -->
+  <!-- JS hooks: id="mobile-menu", class="mobile-menu-close"        -->
+  <!-- ============================================================ -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation">
+    <button type="button" class="mobile-menu-close" aria-label="Close navigation">Close</button>
+    <!-- EDITABLE: Mobile nav links — update anchor text and add/remove links as needed -->
+    <a href="#hero">Home</a>
+    <a href="#info">Opening Hours</a>
+    <a href="#about">About Us</a>
+    <a href="#menu">Menu</a>
+    <a href="#lunch">Business Lunch</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reservation">Reservations</a>
+    <a href="#events">Events</a>
+    <a href="#location">Getting Here</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- MAIN CONTENT — 11 sections                                   -->
+  <!-- All section IDs are language-neutral English (D-01, D-02)    -->
+  <!-- ============================================================ -->
+  <main>
+
+    <!-- SECT-01: Hero -->
+    <section class="hero" id="hero">
+
+      <picture>
+        <source srcset="../assets/img/hero-desktop.avif" type="image/avif" media="(min-width: 769px)">
+        <source srcset="../assets/img/hero-desktop.webp" type="image/webp" media="(min-width: 769px)">
+        <source srcset="../assets/img/hero-mobile.avif" type="image/avif">
+        <source srcset="../assets/img/hero-mobile.webp" type="image/webp">
+        <img src="../assets/img/hero-desktop.svg"
+             alt="Elegant Italian restaurant Ristorante Paganini in Leipzig"
+             width="1400" height="800"
+             loading="eager" fetchpriority="high" decoding="sync"
+             class="hero__bg">
+      </picture>
+
+      <div class="hero__content flow">
+        <span class="section-label">Ristorante Paganini</span>
+        <h1><em>Dove il gusto incontra la tradizione</em></h1>
+        <!-- EDITABLE: Trust cues — update with real phone number and hours before launch -->
+        <div class="cluster hero__trust-cues">
+          <span>Family-run for over 30 years</span>
+          <span>In the heart of Leipzig city centre</span>
+          <!-- EDIT: Replace XXXXXXXX with real phone number -->
+          <span>Mon–Sat 11:30–22:00 · +49 341 XXXXXXXX</span>
+        </div>
+        <div class="cluster">
+          <a href="#reservation" class="btn" data-variant="primary">Reserve a Table</a>
+          <a href="#menu" class="btn" data-variant="secondary" style="color: var(--color-text-inverse); border-color: var(--color-text-inverse);">Menu</a>
+        </div>
+      </div>
+
+      <div class="hero-sentinel" aria-hidden="true"></div>
+    </section>
+
+    <!-- SECT-02: Quick Info Bar -->
+    <section id="info" class="section--dark">
+      <div class="info-bar wrapper">
+        <!-- EDITABLE: Opening hours — update if hours change -->
+        <span><strong>Opening Hours:</strong> Mon–Fri 11:30–22:00 · Sat 12:00–22:00 · Sun 12:00–21:00</span>
+        <!-- EDIT: Replace with real address -->
+        <span><strong>Address:</strong> Große Fleischergasse, 04109 Leipzig</span>
+        <!-- EDIT: Replace XXXXXXXX with real phone number -->
+        <span><strong>Phone:</strong> <a href="tel:+49341XXXXXXXX">+49 341 XXXXXXXX</a></span>
+        <a href="#reservation" class="btn" data-variant="primary">Reserve a Table</a>
+        <span><strong>Business Lunch:</strong> Mon–Fri 11:30–14:30</span>
+        <!-- EDITABLE: Terrace note — update seasonally -->
+        <span>Terrace open (seasonal)</span>
+      </div>
+    </section>
+
+    <!-- SECT-03: About / Philosophy -->
+    <section id="about" class="section">
+      <div class="wrapper content-wrapper flow">
+        <h2>Our Story</h2>
+        <!-- EDITABLE: About section — family story, update as needed -->
+        <p>Welcome to Ristorante Paganini — your piece of Italy in the heart of Leipzig. For over 30 years we have run our restaurant with the same passion our family brought from our Italian homeland. We combine traditional recipes with fresh, carefully selected ingredients for an authentic taste experience.</p>
+        <p>Our cuisine lives by the simplicity and honesty of the Italian tradition. From handmade pasta to oven-fresh pizza — every dish tells a story of quality and dedication. We source our ingredients, wherever possible, directly from selected suppliers in Italy and the region.</p>
+        <p>Whether a relaxed lunch, a romantic dinner or an evening with friends — you are warmly welcome. Come in, take a seat and let our hospitality and cuisine enchant you.</p>
+      </div>
+    </section>
+
+    <!-- SECT-04: Menu Overview -->
+    <section id="menu" class="section section--alt">
+      <div class="wrapper flow">
+        <h2>Our Menu</h2>
+        <p class="content-wrapper">Discover the diversity of Italian cuisine — from classic pasta to crispy pizza, fine antipasti and exquisite wines. Our menu combines tradition with seasonal inspiration.</p>
+
+        <div class="menu-cards">
+          <!-- EDITABLE: Menu category cards — update dish highlights as menu changes -->
+
+          <div class="menu-card">
+            <h3>Pasta</h3>
+            <ul class="flow" role="list">
+              <li>
+                <span class="menu-card__dish">Tagliatelle al Tartufo</span>
+                <span class="menu-card__desc">Fresh ribbon pasta with black truffle and Parmigiano</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Spaghetti alle Vongole</span>
+                <span class="menu-card__desc">Spaghetti with fresh clams, garlic and white wine</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Rigatoni alla Norma</span>
+                <span class="menu-card__desc">Rigatoni with aubergine, tomato and salted ricotta</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu-card">
+            <h3>Pizza</h3>
+            <ul class="flow" role="list">
+              <li>
+                <span class="menu-card__dish">Margherita D.O.P.</span>
+                <span class="menu-card__desc">San Marzano tomatoes, buffalo mozzarella, fresh basil</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Diavola</span>
+                <span class="menu-card__desc">Spicy salami, tomatoes, mozzarella, pepperoncini</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Quattro Formaggi</span>
+                <span class="menu-card__desc">Mozzarella, Gorgonzola, Parmigiano, Taleggio</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu-card">
+            <h3>Antipasti</h3>
+            <ul class="flow" role="list">
+              <li>
+                <span class="menu-card__dish">Carpaccio di Manzo</span>
+                <span class="menu-card__desc">Thinly sliced beef fillet with rocket and Parmesan</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Burrata con Pomodori</span>
+                <span class="menu-card__desc">Creamy burrata with marinated tomatoes and basil</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Vitello Tonnato</span>
+                <span class="menu-card__desc">Tender veal with delicate tuna cream and capers</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu-card">
+            <h3>Wine</h3>
+            <ul class="flow" role="list">
+              <li>
+                <span class="menu-card__dish">Chianti Classico Riserva</span>
+                <span class="menu-card__desc">Full-bodied red wine from Tuscany with notes of cherry and leather</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Pinot Grigio delle Venezie</span>
+                <span class="menu-card__desc">Fresh, light white wine from Veneto</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Prosecco di Valdobbiadene</span>
+                <span class="menu-card__desc">Fine sparkling wine with fruity notes and elegant bubbles</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- EDITABLE: Menu CTA buttons — update PDF link when real menu is ready -->
+        <div class="cluster" style="justify-content: center; margin-block-start: var(--space-8);">
+          <a href="../assets/pdf/speisekarte.pdf" class="btn" data-variant="primary" download>Download Menu</a>
+          <a href="../assets/pdf/speisekarte.pdf" class="btn" data-variant="secondary">Full Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECT-05: Business Lunch -->
+    <section id="lunch" class="section">
+      <div class="wrapper flow">
+        <h2>Business Lunch</h2>
+        <p class="font-heading" style="font-size: var(--font-size-heading-lg); color: var(--color-accent);">11:30 – 14:30</p>
+        <p class="content-wrapper">Enjoy our changing lunch menu — freshly prepared every day with seasonal ingredients. A taste of Italy for your lunch break.</p>
+
+        <div class="lunch-highlights">
+          <!-- EDITABLE: Lunch highlights — update dish names and descriptions monthly -->
+
+          <div class="lunch-slot">
+            <h3>Starter</h3>
+            <!-- EDIT: Update dish name monthly -->
+            <p><strong>Bruschetta al Pomodoro</strong></p>
+            <p class="menu-card__desc">Toasted bread with fresh tomatoes, basil and olive oil</p>
+          </div>
+
+          <div class="lunch-slot">
+            <h3>Pasta</h3>
+            <!-- EDIT: Update dish name monthly -->
+            <p><strong>Tagliatelle al Ragù</strong></p>
+            <p class="menu-card__desc">Handmade tagliatelle with homemade Bolognese ragù</p>
+          </div>
+
+          <div class="lunch-slot">
+            <h3>Main Course</h3>
+            <!-- EDIT: Update dish name monthly -->
+            <p><strong>Pollo alla Cacciatora</strong></p>
+            <p class="menu-card__desc">Braised chicken with tomatoes, olives and herbs, served with polenta</p>
+          </div>
+
+          <div class="lunch-slot">
+            <h3>Dessert</h3>
+            <!-- EDIT: Update dish name monthly -->
+            <p><strong>Panna Cotta alla Vaniglia</strong></p>
+            <p class="menu-card__desc">Creamy vanilla panna cotta with fresh berries</p>
+          </div>
+        </div>
+
+        <!-- EDIT: Update for holidays, closures, or special lunch hours -->
+        <p class="menu-card__desc"><em>Please note: Lunch service may vary on public holidays.</em></p>
+
+        <!-- EDITABLE: Lunch menu PDF link — update when real PDF is ready -->
+        <a href="../assets/pdf/mittagskarte.pdf" class="btn" data-variant="secondary" download>Download Lunch Menu</a>
+      </div>
+    </section>
+
+    <!-- SECT-06: Gallery -->
+    <section id="gallery" class="section section--alt">
+      <div class="wrapper flow">
+        <h2>Gallery</h2>
+        <!-- EDITABLE: Gallery images — replace SVG placeholders with real photography -->
+
+        <div class="gallery">
+          <!-- Image 1: Food — spans 2 columns (per D-11) -->
+          <div class="gallery__item" data-span="2" data-lightbox-trigger
+               data-lightbox-src="../assets/img/gallery-01.svg"
+               data-lightbox-alt="Handmade pasta using a traditional family recipe">
+            <picture>
+              <source srcset="../assets/img/gallery-01.avif" type="image/avif">
+              <source srcset="../assets/img/gallery-01.webp" type="image/webp">
+              <img src="../assets/img/gallery-01.svg"
+                   alt="Handmade pasta using a traditional family recipe"
+                   width="1200" height="600" loading="lazy" decoding="async">
+            </picture>
+            <div class="gallery__caption" aria-hidden="true">Handmade Pasta</div>
+          </div>
+
+          <!-- Image 2: Interior -->
+          <div class="gallery__item" data-lightbox-trigger
+               data-lightbox-src="../assets/img/gallery-02.svg"
+               data-lightbox-alt="Elegant atmosphere at Ristorante Paganini">
+            <picture>
+              <source srcset="../assets/img/gallery-02.avif" type="image/avif">
+              <source srcset="../assets/img/gallery-02.webp" type="image/webp">
+              <img src="../assets/img/gallery-02.svg"
+                   alt="Elegant atmosphere at Ristorante Paganini"
+                   width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <div class="gallery__caption" aria-hidden="true">Our Restaurant</div>
+          </div>
+
+          <!-- Image 3: Food -->
+          <div class="gallery__item" data-lightbox-trigger
+               data-lightbox-src="../assets/img/gallery-03.svg"
+               data-lightbox-alt="Fresh pizza from the stone oven">
+            <picture>
+              <source srcset="../assets/img/gallery-03.avif" type="image/avif">
+              <source srcset="../assets/img/gallery-03.webp" type="image/webp">
+              <img src="../assets/img/gallery-03.svg"
+                   alt="Fresh pizza from the stone oven"
+                   width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <div class="gallery__caption" aria-hidden="true">Stone Oven Pizza</div>
+          </div>
+
+          <!-- Image 4: Interior -->
+          <div class="gallery__item" data-lightbox-trigger
+               data-lightbox-src="../assets/img/gallery-04.svg"
+               data-lightbox-alt="Cosy corner for a romantic dinner">
+            <picture>
+              <source srcset="../assets/img/gallery-04.avif" type="image/avif">
+              <source srcset="../assets/img/gallery-04.webp" type="image/webp">
+              <img src="../assets/img/gallery-04.svg"
+                   alt="Cosy corner for a romantic dinner"
+                   width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <div class="gallery__caption" aria-hidden="true">Romantic Atmosphere</div>
+          </div>
+
+          <!-- Image 5: Terrace -->
+          <div class="gallery__item" data-lightbox-trigger
+               data-lightbox-src="../assets/img/gallery-05.svg"
+               data-lightbox-alt="Sunny terrace in the heart of Leipzig">
+            <picture>
+              <source srcset="../assets/img/gallery-05.avif" type="image/avif">
+              <source srcset="../assets/img/gallery-05.webp" type="image/webp">
+              <img src="../assets/img/gallery-05.svg"
+                   alt="Sunny terrace in the heart of Leipzig"
+                   width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <div class="gallery__caption" aria-hidden="true">Our Terrace</div>
+          </div>
+
+          <!-- Image 6: Exterior/Entrance -->
+          <div class="gallery__item" data-lightbox-trigger
+               data-lightbox-src="../assets/img/gallery-06.svg"
+               data-lightbox-alt="Entrance to Ristorante Paganini on Große Fleischergasse">
+            <picture>
+              <source srcset="../assets/img/gallery-06.avif" type="image/avif">
+              <source srcset="../assets/img/gallery-06.webp" type="image/webp">
+              <img src="../assets/img/gallery-06.svg"
+                   alt="Entrance to Ristorante Paganini on Große Fleischergasse"
+                   width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <div class="gallery__caption" aria-hidden="true">Our Entrance</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECT-07: Reservation -->
+    <section id="reservation" class="section">
+      <div class="wrapper content-wrapper flow" style="text-align: center;">
+        <h2>Reserve a Table</h2>
+        <p>Secure your table at Ristorante Paganini. We look forward to your visit.</p>
+
+        <!-- PLACEHOLDER: Paste reservation widget embed code here (TheFork/Resy/OpenTable) -->
+        <div class="reservation-embed">
+          <p>Reserve your table directly here. Alternatively: +49 341 XXXXXXXX</p>
+        </div>
+
+        <!-- EDIT: Replace XXXXXXXX with real phone number -->
+        <a href="tel:+49341XXXXXXXX" class="btn" data-variant="primary">Call Us</a>
+      </div>
+    </section>
+
+    <!-- SECT-08: Groups / Events -->
+    <section id="events" class="section section--alt">
+      <div class="wrapper content-wrapper flow">
+        <h2>Groups &amp; Events</h2>
+        <p>Planning a special meal with your family, friends or colleagues? We are happy to host your private celebration or business dinner — with an individually tailored menu and personal service.</p>
+        <p>Whether birthday, anniversary, corporate event or Christmas party — get in touch, and we will create an unforgettable evening for you and your guests.</p>
+        <!-- EDITABLE: Groups/Events CTAs — update phone and email when real data available -->
+        <div class="cluster" style="justify-content: center;">
+          <!-- EDIT: Replace XXXXXXXX with real phone number -->
+          <a href="tel:+49341XXXXXXXX" class="btn" data-variant="primary">Call Now</a>
+          <!-- EDIT: Replace with real email address -->
+          <a href="mailto:info@example.com" class="btn" data-variant="secondary">Send an Email</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECT-09: Location -->
+    <section id="location" class="section">
+      <div class="wrapper">
+        <h2>Getting Here</h2>
+        <div class="grid" data-layout="halves">
+          <div class="flow">
+            <!-- EDIT: Verify address with owner before launch -->
+            <address style="font-style: normal; line-height: 1.8;">
+              <strong>Ristorante Paganini</strong><br>
+              Große Fleischergasse<br>
+              04109 Leipzig<br>
+              Germany
+            </address>
+            <!-- EDIT: Replace XXXXXXXX with real phone number -->
+            <p><a href="tel:+49341XXXXXXXX">+49 341 XXXXXXXX</a></p>
+            <!-- EDIT: Replace with real email -->
+            <p><a href="mailto:info@example.com">info@example.com</a></p>
+
+            <p><strong>Parking:</strong></p>
+            <ul class="flow" role="list">
+              <li>Große Fleischergasse (street parking)</li>
+              <li>Brühl Center car park (approx. 200 m)</li>
+              <li>Public parking in the city centre</li>
+            </ul>
+
+            <!-- EDIT: Replace with real Google Maps coordinates -->
+            <a href="https://maps.google.com/?q=Große+Fleischergasse,+04109+Leipzig" target="_blank" rel="noopener noreferrer" class="btn" data-variant="secondary">View on Google Maps</a>
+          </div>
+          <div>
+            <!-- PLACEHOLDER: Replace with real map image or static map screenshot -->
+            <picture>
+              <source srcset="../assets/img/about-bg.avif" type="image/avif">
+              <source srcset="../assets/img/about-bg.webp" type="image/webp">
+              <img src="../assets/img/about-bg.svg"
+                   alt="Location of Ristorante Paganini in Leipzig city centre"
+                   width="800" height="600" loading="lazy" decoding="async"
+                   style="width: 100%; height: auto; border-radius: var(--radius-md);">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECT-10: FAQ -->
+    <section id="faq" class="section section--alt">
+      <div class="wrapper content-wrapper flow">
+        <h2>Frequently Asked Questions</h2>
+        <!-- SYNC: Update FAQPage JSON-LD in <head> when editing these Q&A pairs -->
+        <dl class="faq-list">
+          <dt>Do I need a reservation?</dt>
+          <dd>We recommend a reservation, especially on weekends and public holidays. During the week, tables are often available at short notice. Reserve conveniently by phone at +49 341 XXXXXXXX or use our online reservation system.</dd>
+
+          <dt>Do you have a business lunch?</dt>
+          <dd>Yes, we offer a changing business lunch menu Monday to Friday from 11:30 to 14:30. Our lunch menu includes a starter, pasta, main course and dessert — freshly prepared with seasonal ingredients at an attractive price.</dd>
+
+          <dt>Where can I park?</dt>
+          <dd>Parking is available close by on Große Fleischergasse and in the Brühl Center car park, just 200 metres away. Further public parking is available throughout Leipzig city centre.</dd>
+
+          <dt>Do you have vegetarian or vegan dishes?</dt>
+          <dd>Of course. Our menu offers a selection of vegetarian dishes including pasta, pizza and antipasti. For vegan guests we are happy to adapt our dishes — just ask us.</dd>
+
+          <dt>Do you have a terrace?</dt>
+          <dd>Yes, our restaurant has a welcoming terrace right in the heart of Leipzig city centre. In fine weather you can enjoy your meal outdoors — the terrace is open seasonally from spring to autumn.</dd>
+
+          <dt>What payment methods do you accept?</dt>
+          <dd>We accept cash and all major credit and debit cards (Visa, Mastercard, EC card). Contactless payment is also available.</dd>
+
+          <dt>Are dogs welcome?</dt>
+          <dd>Yes, well-behaved dogs are very welcome — both inside and on our terrace. We are happy to provide a water bowl.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- SECT-11: Contact -->
+    <section id="contact" class="section">
+      <div class="wrapper">
+        <h2>Contact</h2>
+        <div class="grid" data-layout="halves">
+          <div class="flow">
+            <h3>Get in Touch</h3>
+            <!-- EDIT: Replace XXXXXXXX with real phone number -->
+            <p><strong>Phone:</strong> <a href="tel:+49341XXXXXXXX">+49 341 XXXXXXXX</a></p>
+            <!-- EDIT: Replace with real email address -->
+            <p><strong>Email:</strong> <a href="mailto:info@example.com">info@example.com</a></p>
+            <address style="font-style: normal;">
+              <strong>Address:</strong><br>
+              Ristorante Paganini<br>
+              Große Fleischergasse<br>
+              04109 Leipzig
+            </address>
+          </div>
+          <div class="flow">
+            <h3>Opening Hours</h3>
+            <!-- EDITABLE: Opening hours — update if hours change -->
+            <table style="border-collapse: collapse; width: 100%;">
+              <tbody>
+                <tr><td style="padding: 0.25rem 1rem 0.25rem 0; font-family: var(--font-heading);">Monday – Friday</td><td>11:30 – 22:00</td></tr>
+                <tr><td style="padding: 0.25rem 1rem 0.25rem 0; font-family: var(--font-heading);">Saturday</td><td>12:00 – 22:00</td></tr>
+                <tr><td style="padding: 0.25rem 1rem 0.25rem 0; font-family: var(--font-heading);">Sunday</td><td>12:00 – 21:00</td></tr>
+              </tbody>
+            </table>
+            <!-- EDIT: Replace with real Instagram URL -->
+            <p><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Follow us on Instagram</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- GALLERY LIGHTBOX MODAL                                       -->
+  <!-- JS hooks: id="lightbox", id="lightbox-img/prev/next/close"   -->
+  <!-- ============================================================ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image gallery" aria-hidden="true">
+    <button type="button" class="btn lightbox__close" id="lightbox-close" data-variant="secondary" aria-label="Close gallery" style="color: var(--color-text-inverse); border-color: var(--color-text-inverse);">&#215;</button>
+    <button type="button" class="btn lightbox__nav" id="lightbox-prev" data-dir="prev" data-variant="secondary" aria-label="Previous image" style="color: var(--color-text-inverse); border-color: var(--color-text-inverse);">&#8592;</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="" width="1200" height="800">
+    <button type="button" class="btn lightbox__nav" id="lightbox-next" data-dir="next" data-variant="secondary" aria-label="Next image" style="color: var(--color-text-inverse); border-color: var(--color-text-inverse);">&#8594;</button>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER — SECT-12                                             -->
+  <!-- ============================================================ -->
+  <footer id="footer" class="section--dark" style="padding: var(--space-12) 0;">
+    <div class="wrapper">
+      <div class="grid" data-layout="thirds">
+        <!-- Column 1: Contact summary -->
+        <div class="flow">
+          <p><strong>Ristorante Paganini</strong></p>
+          <p>Große Fleischergasse<br>04109 Leipzig</p>
+          <!-- EDIT: Replace XXXXXXXX with real phone number -->
+          <p><a href="tel:+49341XXXXXXXX" style="color: var(--color-text-inverse);">+49 341 XXXXXXXX</a></p>
+          <!-- EDIT: Replace with real email -->
+          <p><a href="mailto:info@example.com" style="color: var(--color-text-inverse);">info@example.com</a></p>
+        </div>
+        <!-- Column 2: Legal links -->
+        <div class="flow">
+          <p><strong>Legal</strong></p>
+          <!-- Phase 6 will add real legal pages -->
+          <p><a href="/en/impressum.html" style="color: var(--color-text-inverse);">Imprint</a></p>
+          <p><a href="/en/datenschutz.html" style="color: var(--color-text-inverse);">Privacy Policy</a></p>
+        </div>
+        <!-- Column 3: Language switcher -->
+        <div class="flow">
+          <p><strong>Language</strong></p>
+          <p>
+            <a href="/de/" style="color: var(--color-text-inverse);">DE</a> |
+            <a href="/en/" aria-current="true" style="color: var(--color-accent-light); font-weight: var(--font-weight-bold);">EN</a> |
+            <a href="/it/" style="color: var(--color-text-inverse);">IT</a>
+          </p>
+        </div>
+      </div>
+      <p style="margin-top: var(--space-8); font-size: var(--font-size-sm); opacity: 0.7; text-align: center;">
+        &copy; 2026 Ristorante Paganini. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

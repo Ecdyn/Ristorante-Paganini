@@ -112,7 +112,10 @@ Plans:
   2. Every footer in all three language onepages links to the correct legal pages for that language, and those links are keyboard-reachable
   3. Each Datenschutz/privacy page contains a clearly commented placeholder section documenting the Google Maps decision (static address + link, no iframe) and states that no Google Fonts CDN is used — matching the actual implementation
   4. All editable legal placeholder areas are marked with prominent HTML comments reading "REPLACE WITH REAL LEGAL TEXT BEFORE LAUNCH" with the specific section identified
-**Plans:** TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 06-01-PLAN.md — German legal pages (de/impressum.html, de/datenschutz.html) with TMG section structure and GDPR documentation
+- [ ] 06-02-PLAN.md — EN/IT legal pages + footer link corrections in en/index.html and it/index.html
 **UI hint**: yes
 
 ### Phase 7: Root Redirect
@@ -124,7 +127,10 @@ Plans:
   2. A browser with an unrecognized language (e.g., French, Japanese) is redirected to /de/ as the default fallback
   3. The root index.html carries a meta noindex tag, contains no visible content, and is not listed in sitemap.xml — it is a redirect utility only
   4. A noscript fallback meta refresh tag redirects to /de/ for browsers with JavaScript disabled
-**Plans:** TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 06-01-PLAN.md — German legal pages (de/impressum.html, de/datenschutz.html) with TMG section structure and GDPR documentation
+- [ ] 06-02-PLAN.md — EN/IT legal pages + footer link corrections in en/index.html and it/index.html
 
 ### Phase 8: SEO Files and Technical Audit
 **Goal**: The site has complete SEO infrastructure files and passes all technical validation checks — the site is launch-ready with zero known errors in structured data, hreflang, Core Web Vitals, or accessibility
@@ -137,7 +143,10 @@ Plans:
   4. Lighthouse on the German onepage scores LCP under 2.5 seconds, zero CLS, and flags zero render-blocking resources
   5. A WAVE accessibility audit on all three onepages returns zero errors (contrast, missing alt, missing form labels, heading hierarchy)
 
-**Plans:** TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 06-01-PLAN.md — German legal pages (de/impressum.html, de/datenschutz.html) with TMG section structure and GDPR documentation
+- [ ] 06-02-PLAN.md — EN/IT legal pages + footer link corrections in en/index.html and it/index.html
 
 ## Progress
 

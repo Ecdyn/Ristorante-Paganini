@@ -126,7 +126,7 @@ Plans:
   4. A noscript fallback meta refresh tag redirects to /de/ for browsers with JavaScript disabled
 **Plans:** 1 plan
 Plans:
-- [ ] 07-01-PLAN.md — Root index.html with language detection, branded flash, noscript fallback, and noindex meta
+- [x] 07-01-PLAN.md — Root index.html with language detection, branded flash, noscript fallback, and noindex meta
 
 ### Phase 8: SEO Files and Technical Audit
 **Goal**: The site has complete SEO infrastructure files and passes all technical validation checks — the site is launch-ready with zero known errors in structured data, hreflang, Core Web Vitals, or accessibility

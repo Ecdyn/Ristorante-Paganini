@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+  <!-- ============================================================ -->
+  <!-- META — charset (must be first) and viewport                  -->
+  <!-- ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================================================ -->
+  <!-- TITLE and META DESCRIPTION                                   -->
+  <!-- D-06: IT title format, D-07: warm/inviting tone              -->
+  <!-- ============================================================ -->
+  <title>Ristorante Paganini | Ristorante Italiano Lipsia</title>
+
+  <!-- EDIT: Replace XXXXXXXX with real phone number before launch -->
+  <meta name="description" content="Scoprite la cucina italiana autentica nel cuore di Lipsia. Ristorante Paganini — a conduzione familiare, con passione per la qualità e l'ospitalità da generazioni. Prenotate un tavolo: +49 341 XXXXXXXX">
+
+  <!-- ============================================================ -->
+  <!-- CANONICAL                                                    -->
+  <!-- D-15: canonical points to self (IT page)                     -->
+  <!-- ============================================================ -->
+  <!-- PLACEHOLDER: Replace example.com with real domain before launch -->
+  <link rel="canonical" href="https://www.example.com/it/">
+
+  <!-- ============================================================ -->
+  <!-- HREFLANG — reciprocal cluster (D-12, D-14, SEO-03)           -->
+  <!-- All 4 tags required: de, en, it, x-default                   -->
+  <!-- ============================================================ -->
+  <!-- PLACEHOLDER: Replace example.com with real domain in all alternate lang URLs before launch -->
+  <link rel="alternate" hreflang="de" href="https://www.example.com/de/">
+  <link rel="alternate" hreflang="en" href="https://www.example.com/en/">
+  <link rel="alternate" hreflang="it" href="https://www.example.com/it/">
+  <link rel="alternate" hreflang="x-default" href="https://www.example.com/de/">
+
+  <!-- ============================================================ -->
+  <!-- OPEN GRAPH (D-08, D-09, SEO-02)                              -->
+  <!-- ============================================================ -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Ristorante Paganini">
+  <meta property="og:title" content="Ristorante Paganini | Ristorante Italiano Lipsia">
+  <meta property="og:description" content="Scoprite la cucina italiana autentica nel cuore di Lipsia. Ristorante Paganini — a conduzione familiare, con passione per la qualità e l'ospitalità da generazioni. Prenotate un tavolo: +49 341 XXXXXXXX">
+  <meta property="og:url" content="https://www.example.com/it/">
+  <meta property="og:image" content="https://www.example.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- PLACEHOLDER: Replace example.com with real domain before launch -->
+  <!-- PLACEHOLDER: Replace og-image.jpg with real photography before launch -->
+
+  <!-- ============================================================ -->
+  <!-- TWITTER CARD (D-11, SEO-02)                                  -->
+  <!-- ============================================================ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ristorante Paganini | Ristorante Italiano Lipsia">
+  <meta name="twitter:description" content="Scoprite la cucina italiana autentica nel cuore di Lipsia. Ristorante Paganini — a conduzione familiare, con passione per la qualità e l'ospitalità da generazioni. Prenotate un tavolo: +49 341 XXXXXXXX">
+  <meta name="twitter:image" content="https://www.example.com/assets/img/og-image.jpg">
+  <!-- PLACEHOLDER: Replace example.com and og-image.jpg before launch -->
+
+  <!-- ============================================================ -->
+  <!-- FAVICON SET — SEO-09                                         -->
+  <!-- Evil Martians 4-tag approach (svg + ico + apple + manifest)  -->
+  <!-- Paths relative from /it/ — all assets in ../assets/          -->
+  <!-- ============================================================ -->
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="manifest" href="../assets/site.webmanifest">
+
+  <!-- ============================================================ -->
+  <!-- STYLESHEET — single file, no @import, no CDN                 -->
+  <!-- ============================================================ -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+
+  <!-- ============================================================ -->
+  <!-- STRUCTURED DATA (JSON-LD)                                    -->
+  <!-- D-03, D-04, D-09: Restaurant + LocalBusiness schema (IT)     -->
+  <!-- ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Restaurant", "LocalBusiness"],
+    "name": "Ristorante Paganini",
+    "description": "Autentico ristorante italiano nel centro di Lipsia. A conduzione familiare da generazioni.",
+    "url": "https://www.example.com/it/",
+    "telephone": "+49 341 XXXXXXXX",
+    "servesCuisine": "Italian",
+    "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, Credit Card",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Grosse Fleischergasse",
+      "addressLocality": "Leipzig",
+      "postalCode": "04109",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.3397,
+      "longitude": 12.3731
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "11:30",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "12:00",
+        "closes": "22:00"
+      }
+    ],
+    "image": "https://www.example.com/assets/img/og-image.jpg",
+    "inLanguage": "it"
+  }
+  </script>
+  <!-- EDIT: telephone — replace XXXXXXXX with real number before launch -->
+  <!-- EDIT: openingHoursSpecification — confirm actual hours with owner before launch -->
+  <!-- PLACEHOLDER: Replace example.com and og-image.jpg with real values before launch -->
+  <!-- SYNC: Update this JSON-LD block in de/ and en/ when translating -->
+
+  <!-- ============================================================ -->
+  <!-- STRUCTURED DATA (JSON-LD) — FAQPage                          -->
+  <!-- D-04, D-05, SEO-08: 7 FAQ questions — IT translations        -->
+  <!-- SYNC: Must match #faq section Q&A text character-for-character -->
+  <!-- ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Devo prenotare?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vi consigliamo di prenotare, soprattutto nei fine settimana e nei giorni festivi. Durante la settimana è spesso possibile trovare un tavolo anche all'ultimo momento. Prenotate comodamente per telefono al +49 341 XXXXXXXX o tramite il nostro sistema di prenotazione online."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Offrite un pranzo di lavoro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, offriamo un menu di pranzo di lavoro variabile dal lunedì al venerdì dalle 11:30 alle 14:30. Il nostro menu include antipasto, pasta, secondo e dessert — preparato fresco con ingredienti di stagione a un prezzo conveniente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dove posso parcheggiare?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nelle immediate vicinanze trovate parcheggi sulla Große Fleischergasse e al parcheggio Brühl Center, a soli 200 metri. Ulteriori parcheggi pubblici sono disponibili nel centro di Lipsia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Avete piatti vegetariani o vegani?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Certo. Il nostro menù offre una selezione di piatti vegetariani, tra cui pasta, pizza e antipasti. Per gli ospiti vegani adattiamo volentieri i nostri piatti — chiedeteci pure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Avete una terrazza?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, il nostro ristorante dispone di una piacevole terrazza nel cuore del centro di Lipsia. Con il bel tempo potete gustare il vostro pasto all'aperto — la terrazza è aperta stagionalmente dalla primavera all'autunno."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quali metodi di pagamento accettate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Accettiamo contanti e tutte le principali carte di credito e di debito (Visa, Mastercard, Bancomat). È disponibile anche il pagamento contactless."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I cani sono benvenuti?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, i cani ben educati sono i benvenuti — sia all'interno che sulla nostra terrazza. Siamo felici di mettere a disposizione una ciotola d'acqua."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- SYNC: FAQPage JSON-LD must match #faq section Q&A text exactly — update both together -->
+
+  <!-- ============================================================ -->
+  <!-- JAVASCRIPT — deferred, non-blocking                          -->
+  <!-- ============================================================ -->
+  <script src="../assets/js/main.js" defer></script>
+
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- HEADER — sticky site navigation                              -->
+  <!-- JS hooks: id="site-header", id="menu-toggle"                 -->
+  <!-- ============================================================ -->
+  <header class="header" id="site-header">
+    <a href="#hero" class="font-heading" style="font-size: 1.5rem; text-decoration: none; color: var(--color-accent); font-weight: 700;">
+      Ristorante Paganini
+    </a>
+
+    <nav>
+      <!-- EDITABLE: Desktop nav links — update anchor text and add/remove links as needed -->
+      <ul class="nav" role="list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">Chi Siamo</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#lunch">Pranzo di Lavoro</a></li>
+        <li><a href="#reservation">Prenotazioni</a></li>
+        <li><a href="#contact">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <button type="button" class="menu-toggle" id="menu-toggle"
+            aria-expanded="false" aria-controls="mobile-menu"
+            aria-label="Apri navigazione">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- MOBILE MENU — full-screen overlay navigation                 -->
+  <!-- JS hooks: id="mobile-menu", class="mobile-menu-close"        -->
+  <!-- ============================================================ -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigazione">
+    <button type="button" class="mobile-menu-close" aria-label="Chiudi navigazione">Chiudi</button>
+    <!-- EDITABLE: Mobile nav links — update anchor text and add/remove links as needed -->
+    <a href="#hero">Home</a>
+    <a href="#info">Orari</a>
+    <a href="#about">Chi Siamo</a>
+    <a href="#menu">Menu</a>
+    <a href="#lunch">Pranzo di Lavoro</a>
+    <a href="#gallery">Galleria</a>
+    <a href="#reservation">Prenotazioni</a>
+    <a href="#events">Eventi</a>
+    <a href="#location">Come Raggiungerci</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contatti</a>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- MAIN CONTENT — 11 sections                                   -->
+  <!-- All section IDs are language-neutral English (D-01, D-02)    -->
+  <!-- ============================================================ -->
+  <main>
+
+    <!-- SECT-01: Hero -->
+    <section class="hero" id="hero">
+
+      <picture>
+        <source srcset="../assets/img/hero-desktop.avif" type="image/avif" media="(min-width: 769px)">
+        <source srcset="../assets/img/hero-desktop.webp" type="image/webp" media="(min-width: 769px)">
+        <source srcset="../assets/img/hero-mobile.avif" type="image/avif">
+        <source srcset="../assets/img/hero-mobile.webp" type="image/webp">
+        <img src="../assets/img/hero-desktop.svg"
+             alt="Elegante ristorante italiano Ristorante Paganini a Lipsia"
+             width="1400" height="800"
+             loading="eager" fetchpriority="high" decoding="sync"
+             class="hero__bg">
+      </picture>
+
+      <div class="hero__content flow">
+        <span class="section-label">Ristorante Paganini</span>
+        <h1><em>Dove il gusto incontra la tradizione</em></h1>
+        <!-- EDITABLE: Trust cues — update with real phone number and hours before launch -->
+        <div class="cluster hero__trust-cues">
+          <span>A conduzione familiare da oltre 30 anni</span>
+          <span>Nel cuore del centro di Lipsia</span>
+          <!-- EDIT: Replace XXXXXXXX with real phone number -->
+          <span>Lun–Sab 11:30–22:00 · +49 341 XXXXXXXX</span>
+        </div>
+        <div class="cluster">
+          <a href="#reservation" class="btn" data-variant="primary">Prenota un Tavolo</a>
+          <a href="#menu" class="btn" data-variant="secondary" style="color: var(--color-text-inverse); border-color: var(--color-text-inverse);">Menu</a>
+        </div>
+      </div>
+
+      <div class="hero-sentinel" aria-hidden="true"></div>
+    </section>
+
+    <!-- SECT-02: Quick Info Bar -->
+    <section id="info" class="section--dark">
+      <div class="info-bar wrapper">
+        <!-- EDITABLE: Opening hours — update if hours change -->
+        <span><strong>Orari:</strong> Lun–Ven 11:30–22:00 · Sab 12:00–22:00 · Dom 12:00–21:00</span>
+        <!-- EDIT: Replace with real address -->
+        <span><strong>Indirizzo:</strong> Große Fleischergasse, 04109 Leipzig</span>
+        <!-- EDIT: Replace XXXXXXXX with real phone number -->
+        <span><strong>Telefono:</strong> <a href="tel:+49341XXXXXXXX">+49 341 XXXXXXXX</a></span>
+        <a href="#reservation" class="btn" data-variant="primary">Prenota un Tavolo</a>
+        <span><strong>Pranzo di Lavoro:</strong> Lun–Ven 11:30–14:30</span>
+        <!-- EDITABLE: Terrace note — update seasonally -->
+        <span>Terrazza aperta (stagionale)</span>
+      </div>
+    </section>
+
+    <!-- SECT-03: About / Philosophy -->
+    <section id="about" class="section">
+      <div class="wrapper content-wrapper flow">
+        <h2>La Nostra Storia</h2>
+        <!-- EDITABLE: About section — family story, update as needed -->
+        <p>Benvenuti al Ristorante Paganini — il vostro angolo d'Italia nel cuore di Lipsia. Da oltre 30 anni gestiamo il nostro ristorante con la stessa passione che la nostra famiglia ha portato dalla terra d'origine. Uniamo ricette tradizionali a ingredienti freschi e selezionati per un'esperienza di gusto autentica.</p>
+        <p>La nostra cucina si ispira alla semplicità e all'onestà della tradizione italiana. Dalla pasta fatta a mano alla pizza fresca di forno — ogni piatto racconta una storia di qualità e dedizione. Approvvigionamo i nostri ingredienti, quando possibile, direttamente da fornitori selezionati in Italia e nella regione.</p>
+        <p>Che si tratti di un pranzo tranquillo, una cena romantica o una serata con gli amici — siete i benvenuti. Entrate, accomodatevi e lasciatevi incantare dalla nostra ospitalità e dalla nostra cucina.</p>
+      </div>
+    </section>
+
+    <!-- SECT-04: Menu Overview -->
+    <section id="menu" class="section section--alt">
+      <div class="wrapper flow">
+        <h2>Il Nostro Menu</h2>
+        <p class="content-wrapper">Scoprite la ricchezza della cucina italiana — dalla pasta classica alla pizza croccante, dai raffinati antipasti ai vini pregiati. Il nostro menu unisce tradizione e ispirazione stagionale.</p>
+
+        <div class="menu-cards">
+          <!-- EDITABLE: Menu category cards — update dish highlights as menu changes -->
+
+          <div class="menu-card">
+            <h3>Pasta</h3>
+            <ul class="flow" role="list">
+              <li>
+                <span class="menu-card__dish">Tagliatelle al Tartufo</span>
+                <span class="menu-card__desc">Tagliatelle fresche con tartufo nero e Parmigiano</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Spaghetti alle Vongole</span>
+                <span class="menu-card__desc">Spaghetti con vongole fresche, aglio e vino bianco</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Rigatoni alla Norma</span>
+                <span class="menu-card__desc">Rigatoni con melanzane, pomodoro e ricotta salata</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu-card">
+            <h3>Pizza</h3>
+            <ul class="flow" role="list">
+              <li>
+                <span class="menu-card__dish">Margherita D.O.P.</span>
+                <span class="menu-card__desc">Pomodori San Marzano, mozzarella di bufala, basilico fresco</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Diavola</span>
+                <span class="menu-card__desc">Salame piccante, pomodori, mozzarella, peperoncini</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Quattro Formaggi</span>
+                <span class="menu-card__desc">Mozzarella, Gorgonzola, Parmigiano, Taleggio</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu-card">
+            <h3>Antipasti</h3>
+            <ul class="flow" role="list">
+              <li>
+                <span class="menu-card__dish">Carpaccio di Manzo</span>
+                <span class="menu-card__desc">Filetto di manzo tagliato finemente con rucola e Parmigiano</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Burrata con Pomodori</span>
+                <span class="menu-card__desc">Burrata cremosa con pomodori marinati e basilico</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Vitello Tonnato</span>
+                <span class="menu-card__desc">Vitello tenero con crema di tonno e capperi</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu-card">
+            <h3>Vino</h3>
+            <ul class="flow" role="list">
+              <li>
+                <span class="menu-card__dish">Chianti Classico Riserva</span>
+                <span class="menu-card__desc">Vino rosso corposo dalla Toscana con note di ciliegia e cuoio</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Pinot Grigio delle Venezie</span>
+                <span class="menu-card__desc">Vino bianco fresco e leggero dal Veneto</span>
+              </li>
+              <li>
+                <span class="menu-card__dish">Prosecco di Valdobbiadene</span>
+                <span class="menu-card__desc">Spumante raffinato con note fruttate e perlage elegante</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- EDITABLE: Menu CTA buttons — update PDF link when real menu is ready -->
+        <div class="cluster" style="justify-content: center; margin-block-start: var(--space-8);">
+          <a href="../assets/pdf/speisekarte.pdf" class="btn" data-variant="primary" download>Scarica il Menu</a>
+          <a href="../assets/pdf/speisekarte.pdf" class="btn" data-variant="secondary">Menu Completo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECT-05: Business Lunch -->
+    <section id="lunch" class="section">
+      <div class="wrapper flow">
+        <h2>Pranzo di Lavoro</h2>
+        <p class="font-heading" style="font-size: var(--font-size-heading-lg); color: var(--color-accent);">11:30 – 14:30</p>
+        <p class="content-wrapper">Godetevi il nostro pranzo di lavoro variabile — preparato fresco ogni giorno con ingredienti di stagione. Un pezzo d'Italia per la vostra pausa pranzo.</p>
+
+        <div class="lunch-highlights">
+          <!-- EDITABLE: Lunch highlights — update dish names and descriptions monthly -->
+
+          <div class="lunch-slot">
+            <h3>Antipasto</h3>
+            <!-- EDIT: Update dish name monthly -->
+            <p><strong>Bruschetta al Pomodoro</strong></p>
+            <p class="menu-card__desc">Pane tostato con pomodori freschi, basilico e olio d'oliva</p>
+          </div>
+
+          <div class="lunch-slot">
+            <h3>Pasta</h3>
+            <!-- EDIT: Update dish name monthly -->
+            <p><strong>Tagliatelle al Ragù</strong></p>
+            <p class="menu-card__desc">Tagliatelle fatte a mano con ragù bolognese fatto in casa</p>
+          </div>
+
+          <div class="lunch-slot">
+            <h3>Secondo</h3>
+            <!-- EDIT: Update dish name monthly -->
+            <p><strong>Pollo alla Cacciatora</strong></p>
+            <p class="menu-card__desc">Pollo brasato con pomodori, olive ed erbe aromatiche, servito con polenta</p>
+          </div>
+
+          <div class="lunch-slot">
+            <h3>Dessert</h3>
+            <!-- EDIT: Update dish name monthly -->
+            <p><strong>Panna Cotta alla Vaniglia</strong></p>
+            <p class="menu-card__desc">Panna cotta alla vaniglia con frutti di bosco freschi</p>
+          </div>
+        </div>
+
+        <!-- EDIT: Update for holidays, closures, or special lunch hours -->
+        <p class="menu-card__desc"><em>Si prega di notare: il servizio pranzo può variare nei giorni festivi.</em></p>
+
+        <!-- EDITABLE: Lunch menu PDF link — update when real PDF is ready -->
+        <a href="../assets/pdf/mittagskarte.pdf" class="btn" data-variant="secondary" download>Scarica il Menu del Pranzo</a>
+      </div>
+    </section>
+
+    <!-- SECT-06: Gallery -->
+    <section id="gallery" class="section section--alt">
+      <div class="wrapper flow">
+        <h2>Galleria</h2>
+        <!-- EDITABLE: Gallery images — replace SVG placeholders with real photography -->
+
+        <div class="gallery">
+          <!-- Image 1: Food — spans 2 columns (per D-11) -->
+          <div class="gallery__item" data-span="2" data-lightbox-trigger
+               data-lightbox-src="../assets/img/gallery-01.svg"
+               data-lightbox-alt="Pasta fatta a mano secondo la ricetta di famiglia">
+            <picture>
+              <source srcset="../assets/img/gallery-01.avif" type="image/avif">
+              <source srcset="../assets/img/gallery-01.webp" type="image/webp">
+              <img src="../assets/img/gallery-01.svg"
+                   alt="Pasta fatta a mano secondo la ricetta di famiglia"
+                   width="1200" height="600" loading="lazy" decoding="async">
+            </picture>
+            <div class="gallery__caption" aria-hidden="true">Pasta Fatta a Mano</div>
+          </div>
+
+          <!-- Image 2: Interior -->
+          <div class="gallery__item" data-lightbox-trigger
+               data-lightbox-src="../assets/img/gallery-02.svg"
+               data-lightbox-alt="Atmosfera elegante al Ristorante Paganini">
+            <picture>
+              <source srcset="../assets/img/gallery-02.avif" type="image/avif">
+              <source srcset="../assets/img/gallery-02.webp" type="image/webp">
+              <img src="../assets/img/gallery-02.svg"
+                   alt="Atmosfera elegante al Ristorante Paganini"
+                   width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <div class="gallery__caption" aria-hidden="true">Il Nostro Ristorante</div>
+          </div>
+
+          <!-- Image 3: Food -->
+          <div class="gallery__item" data-lightbox-trigger
+               data-lightbox-src="../assets/img/gallery-03.svg"
+               data-lightbox-alt="Pizza fresca dal forno a legna">
+            <picture>
+              <source srcset="../assets/img/gallery-03.avif" type="image/avif">
+              <source srcset="../assets/img/gallery-03.webp" type="image/webp">
+              <img src="../assets/img/gallery-03.svg"
+                   alt="Pizza fresca dal forno a legna"
+                   width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <div class="gallery__caption" aria-hidden="true">Pizza dal Forno</div>
+          </div>
+
+          <!-- Image 4: Interior -->
+          <div class="gallery__item" data-lightbox-trigger
+               data-lightbox-src="../assets/img/gallery-04.svg"
+               data-lightbox-alt="Angolo accogliente per una cena romantica">
+            <picture>
+              <source srcset="../assets/img/gallery-04.avif" type="image/avif">
+              <source srcset="../assets/img/gallery-04.webp" type="image/webp">
+              <img src="../assets/img/gallery-04.svg"
+                   alt="Angolo accogliente per una cena romantica"
+                   width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <div class="gallery__caption" aria-hidden="true">Atmosfera Romantica</div>
+          </div>
+
+          <!-- Image 5: Terrace -->
+          <div class="gallery__item" data-lightbox-trigger
+               data-lightbox-src="../assets/img/gallery-05.svg"
+               data-lightbox-alt="Terrazza soleggiata nel cuore di Lipsia">
+            <picture>
+              <source srcset="../assets/img/gallery-05.avif" type="image/avif">
+              <source srcset="../assets/img/gallery-05.webp" type="image/webp">
+              <img src="../assets/img/gallery-05.svg"
+                   alt="Terrazza soleggiata nel cuore di Lipsia"
+                   width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <div class="gallery__caption" aria-hidden="true">La Nostra Terrazza</div>
+          </div>
+
+          <!-- Image 6: Exterior/Entrance -->
+          <div class="gallery__item" data-lightbox-trigger
+               data-lightbox-src="../assets/img/gallery-06.svg"
+               data-lightbox-alt="Ingresso del Ristorante Paganini in Große Fleischergasse">
+            <picture>
+              <source srcset="../assets/img/gallery-06.avif" type="image/avif">
+              <source srcset="../assets/img/gallery-06.webp" type="image/webp">
+              <img src="../assets/img/gallery-06.svg"
+                   alt="Ingresso del Ristorante Paganini in Große Fleischergasse"
+                   width="800" height="600" loading="lazy" decoding="async">
+            </picture>
+            <div class="gallery__caption" aria-hidden="true">Il Nostro Ingresso</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECT-07: Reservation -->
+    <section id="reservation" class="section">
+      <div class="wrapper content-wrapper flow" style="text-align: center;">
+        <h2>Prenota un Tavolo</h2>
+        <p>Assicuratevi il vostro tavolo al Ristorante Paganini. Vi aspettiamo con piacere.</p>
+
+        <!-- PLACEHOLDER: Paste reservation widget embed code here (TheFork/Resy/OpenTable) -->
+        <div class="reservation-embed">
+          <p>Prenotate direttamente qui il vostro tavolo. In alternativa: +49 341 XXXXXXXX</p>
+        </div>
+
+        <!-- EDIT: Replace XXXXXXXX with real phone number -->
+        <a href="tel:+49341XXXXXXXX" class="btn" data-variant="primary">Chiamateci</a>
+      </div>
+    </section>
+
+    <!-- SECT-08: Groups / Events -->
+    <section id="events" class="section section--alt">
+      <div class="wrapper content-wrapper flow">
+        <h2>Gruppi &amp; Eventi</h2>
+        <p>Pianificate un pasto speciale con la famiglia, gli amici o i colleghi? Siamo lieti di ospitare la vostra festa privata o la vostra cena di lavoro — con un menu personalizzato e un servizio attento.</p>
+        <p>Che si tratti di un compleanno, un anniversario, un evento aziendale o una festa di Natale — contattateci e organizzeremo per voi una serata indimenticabile.</p>
+        <!-- EDITABLE: Groups/Events CTAs — update phone and email when real data available -->
+        <div class="cluster" style="justify-content: center;">
+          <!-- EDIT: Replace XXXXXXXX with real phone number -->
+          <a href="tel:+49341XXXXXXXX" class="btn" data-variant="primary">Chiamate Ora</a>
+          <!-- EDIT: Replace with real email address -->
+          <a href="mailto:info@example.com" class="btn" data-variant="secondary">Scrivete un'Email</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECT-09: Location -->
+    <section id="location" class="section">
+      <div class="wrapper">
+        <h2>Come Raggiungerci</h2>
+        <div class="grid" data-layout="halves">
+          <div class="flow">
+            <!-- EDIT: Verify address with owner before launch -->
+            <address style="font-style: normal; line-height: 1.8;">
+              <strong>Ristorante Paganini</strong><br>
+              Große Fleischergasse<br>
+              04109 Leipzig<br>
+              Germania
+            </address>
+            <!-- EDIT: Replace XXXXXXXX with real phone number -->
+            <p><a href="tel:+49341XXXXXXXX">+49 341 XXXXXXXX</a></p>
+            <!-- EDIT: Replace with real email -->
+            <p><a href="mailto:info@example.com">info@example.com</a></p>
+
+            <p><strong>Parcheggio:</strong></p>
+            <ul class="flow" role="list">
+              <li>Große Fleischergasse (parcheggio in strada)</li>
+              <li>Parcheggio Brühl Center (ca. 200 m)</li>
+              <li>Parcheggi pubblici nel centro città</li>
+            </ul>
+
+            <!-- EDIT: Replace with real Google Maps coordinates -->
+            <a href="https://maps.google.com/?q=Große+Fleischergasse,+04109+Leipzig" target="_blank" rel="noopener noreferrer" class="btn" data-variant="secondary">Visualizza su Google Maps</a>
+          </div>
+          <div>
+            <!-- PLACEHOLDER: Replace with real map image or static map screenshot -->
+            <picture>
+              <source srcset="../assets/img/about-bg.avif" type="image/avif">
+              <source srcset="../assets/img/about-bg.webp" type="image/webp">
+              <img src="../assets/img/about-bg.svg"
+                   alt="Posizione del Ristorante Paganini nel centro di Lipsia"
+                   width="800" height="600" loading="lazy" decoding="async"
+                   style="width: 100%; height: auto; border-radius: var(--radius-md);">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECT-10: FAQ -->
+    <section id="faq" class="section section--alt">
+      <div class="wrapper content-wrapper flow">
+        <h2>Domande Frequenti</h2>
+        <!-- SYNC: Update FAQPage JSON-LD in <head> when editing these Q&A pairs -->
+        <dl class="faq-list">
+          <dt>Devo prenotare?</dt>
+          <dd>Vi consigliamo di prenotare, soprattutto nei fine settimana e nei giorni festivi. Durante la settimana è spesso possibile trovare un tavolo anche all'ultimo momento. Prenotate comodamente per telefono al +49 341 XXXXXXXX o tramite il nostro sistema di prenotazione online.</dd>
+
+          <dt>Offrite un pranzo di lavoro?</dt>
+          <dd>Sì, offriamo un menu di pranzo di lavoro variabile dal lunedì al venerdì dalle 11:30 alle 14:30. Il nostro menu include antipasto, pasta, secondo e dessert — preparato fresco con ingredienti di stagione a un prezzo conveniente.</dd>
+
+          <dt>Dove posso parcheggiare?</dt>
+          <dd>Nelle immediate vicinanze trovate parcheggi sulla Große Fleischergasse e al parcheggio Brühl Center, a soli 200 metri. Ulteriori parcheggi pubblici sono disponibili nel centro di Lipsia.</dd>
+
+          <dt>Avete piatti vegetariani o vegani?</dt>
+          <dd>Certo. Il nostro menù offre una selezione di piatti vegetariani, tra cui pasta, pizza e antipasti. Per gli ospiti vegani adattiamo volentieri i nostri piatti — chiedeteci pure.</dd>
+
+          <dt>Avete una terrazza?</dt>
+          <dd>Sì, il nostro ristorante dispone di una piacevole terrazza nel cuore del centro di Lipsia. Con il bel tempo potete gustare il vostro pasto all'aperto — la terrazza è aperta stagionalmente dalla primavera all'autunno.</dd>
+
+          <dt>Quali metodi di pagamento accettate?</dt>
+          <dd>Accettiamo contanti e tutte le principali carte di credito e di debito (Visa, Mastercard, Bancomat). È disponibile anche il pagamento contactless.</dd>
+
+          <dt>I cani sono benvenuti?</dt>
+          <dd>Sì, i cani ben educati sono i benvenuti — sia all'interno che sulla nostra terrazza. Siamo felici di mettere a disposizione una ciotola d'acqua.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- SECT-11: Contact -->
+    <section id="contact" class="section">
+      <div class="wrapper">
+        <h2>Contatti</h2>
+        <div class="grid" data-layout="halves">
+          <div class="flow">
+            <h3>Contattateci</h3>
+            <!-- EDIT: Replace XXXXXXXX with real phone number -->
+            <p><strong>Telefono:</strong> <a href="tel:+49341XXXXXXXX">+49 341 XXXXXXXX</a></p>
+            <!-- EDIT: Replace with real email address -->
+            <p><strong>Email:</strong> <a href="mailto:info@example.com">info@example.com</a></p>
+            <address style="font-style: normal;">
+              <strong>Indirizzo:</strong><br>
+              Ristorante Paganini<br>
+              Große Fleischergasse<br>
+              04109 Leipzig
+            </address>
+          </div>
+          <div class="flow">
+            <h3>Orari di Apertura</h3>
+            <!-- EDITABLE: Opening hours — update if hours change -->
+            <table style="border-collapse: collapse; width: 100%;">
+              <tbody>
+                <tr><td style="padding: 0.25rem 1rem 0.25rem 0; font-family: var(--font-heading);">Lunedì – Venerdì</td><td>11:30 – 22:00</td></tr>
+                <tr><td style="padding: 0.25rem 1rem 0.25rem 0; font-family: var(--font-heading);">Sabato</td><td>12:00 – 22:00</td></tr>
+                <tr><td style="padding: 0.25rem 1rem 0.25rem 0; font-family: var(--font-heading);">Domenica</td><td>12:00 – 21:00</td></tr>
+              </tbody>
+            </table>
+            <!-- EDIT: Replace with real Instagram URL -->
+            <p><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Seguiteci su Instagram</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- GALLERY LIGHTBOX MODAL                                       -->
+  <!-- JS hooks: id="lightbox", id="lightbox-img/prev/next/close"   -->
+  <!-- ============================================================ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galleria immagini" aria-hidden="true">
+    <button type="button" class="btn lightbox__close" id="lightbox-close" data-variant="secondary" aria-label="Chiudi galleria" style="color: var(--color-text-inverse); border-color: var(--color-text-inverse);">&#215;</button>
+    <button type="button" class="btn lightbox__nav" id="lightbox-prev" data-dir="prev" data-variant="secondary" aria-label="Immagine precedente" style="color: var(--color-text-inverse); border-color: var(--color-text-inverse);">&#8592;</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="" width="1200" height="800">
+    <button type="button" class="btn lightbox__nav" id="lightbox-next" data-dir="next" data-variant="secondary" aria-label="Immagine successiva" style="color: var(--color-text-inverse); border-color: var(--color-text-inverse);">&#8594;</button>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER — SECT-12                                             -->
+  <!-- ============================================================ -->
+  <footer id="footer" class="section--dark" style="padding: var(--space-12) 0;">
+    <div class="wrapper">
+      <div class="grid" data-layout="thirds">
+        <!-- Column 1: Contact summary -->
+        <div class="flow">
+          <p><strong>Ristorante Paganini</strong></p>
+          <p>Große Fleischergasse<br>04109 Leipzig</p>
+          <!-- EDIT: Replace XXXXXXXX with real phone number -->
+          <p><a href="tel:+49341XXXXXXXX" style="color: var(--color-text-inverse);">+49 341 XXXXXXXX</a></p>
+          <!-- EDIT: Replace with real email -->
+          <p><a href="mailto:info@example.com" style="color: var(--color-text-inverse);">info@example.com</a></p>
+        </div>
+        <!-- Column 2: Legal links -->
+        <div class="flow">
+          <p><strong>Note Legali</strong></p>
+          <!-- Phase 6 will add real legal pages -->
+          <p><a href="/it/impressum.html" style="color: var(--color-text-inverse);">Note Legali</a></p>
+          <p><a href="/it/datenschutz.html" style="color: var(--color-text-inverse);">Privacy</a></p>
+        </div>
+        <!-- Column 3: Language switcher -->
+        <div class="flow">
+          <p><strong>Lingua</strong></p>
+          <p>
+            <a href="/de/" style="color: var(--color-text-inverse);">DE</a> |
+            <a href="/en/" style="color: var(--color-text-inverse);">EN</a> |
+            <a href="/it/" aria-current="true" style="color: var(--color-accent-light); font-weight: var(--font-weight-bold);">IT</a>
+          </p>
+        </div>
+      </div>
+      <p style="margin-top: var(--space-8); font-size: var(--font-size-sm); opacity: 0.7; text-align: center;">
+        &copy; 2026 Ristorante Paganini. Tutti i diritti riservati.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

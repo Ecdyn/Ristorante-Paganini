@@ -82,9 +82,9 @@ Plans:
 **Plans:** 4 plans
 Plans:
 - [x] 04-01-PLAN.md — CSS blocks for content sections + placeholder PDFs
-- [ ] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
-- [ ] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
-- [ ] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
+- [x] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
+- [x] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
+- [x] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
 **UI hint**: yes
 
 ### Phase 5: English and Italian Onepages
@@ -99,9 +99,9 @@ Plans:
 **Plans:** 4 plans
 Plans:
 - [x] 04-01-PLAN.md — CSS blocks for content sections + placeholder PDFs
-- [ ] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
-- [ ] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
-- [ ] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
+- [x] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
+- [x] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
+- [x] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
 **UI hint**: yes
 
 ### Phase 6: Legal Pages
@@ -116,8 +116,8 @@ Plans:
 **Plans:** 4 plans
 Plans:
 - [x] 04-01-PLAN.md — CSS blocks for content sections + placeholder PDFs
-- [ ] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
-- [ ] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
+- [x] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
+- [x] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
 - [ ] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
 **UI hint**: yes
 
@@ -133,8 +133,8 @@ Plans:
 **Plans:** 4 plans
 Plans:
 - [x] 04-01-PLAN.md — CSS blocks for content sections + placeholder PDFs
-- [ ] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
-- [ ] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
+- [x] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
+- [x] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
 - [ ] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
 
 ### Phase 8: SEO Files and Technical Audit

@@ -140,3 +140,126 @@
  *    - @media (prefers-reduced-motion: reduce) override in main.css
  *    No JavaScript required.
  * ============================================================ */
+
+
+/* ============================================================
+ * 4. GALLERY LIGHTBOX
+ *    Vanilla JS modal for viewing gallery images larger.
+ *    Hooks: [data-lightbox-trigger] on gallery items,
+ *           id="lightbox" modal, id="lightbox-img" image,
+ *           id="lightbox-prev/next/close" controls.
+ *    ARIA: role="dialog", aria-modal="true",
+ *          aria-label="Bildergalerie"
+ *    Keyboard: Escape closes, ArrowLeft/Right navigates
+ *    (D-14, SECT-06)
+ * ============================================================ */
+
+(function initLightbox() {
+  const lightbox    = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const prevBtn     = document.getElementById('lightbox-prev');
+  const nextBtn     = document.getElementById('lightbox-next');
+  const closeBtn    = document.getElementById('lightbox-close');
+  const triggers    = document.querySelectorAll('[data-lightbox-trigger]');
+
+  if (!lightbox || !lightboxImg || !triggers.length) return;
+
+  const images = [...triggers];
+  let currentIndex = 0;
+  let lastFocused  = null;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Set static ARIA attributes on the lightbox element
+  lightbox.setAttribute('role', 'dialog');
+  lightbox.setAttribute('aria-modal', 'true');
+  lightbox.setAttribute('aria-label', 'Bildergalerie');
+  lightbox.setAttribute('aria-hidden', 'true');
+
+  function updateNavButtons() {
+    if (prevBtn) prevBtn.disabled = currentIndex <= 0;
+    if (nextBtn) nextBtn.disabled = currentIndex >= images.length - 1;
+  }
+
+  function openLightbox(index) {
+    currentIndex       = index;
+    const trigger      = images[index];
+    lightboxImg.src    = trigger.getAttribute('data-lightbox-src') || trigger.getAttribute('href') || '';
+    lightboxImg.alt    = trigger.getAttribute('data-lightbox-alt') || trigger.querySelector('img')?.alt || '';
+    lastFocused        = document.activeElement;
+    lightbox.dataset.open = 'true';
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    updateNavButtons();
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeLightbox() {
+    delete lightbox.dataset.open;
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  function navigate(direction) {
+    const newIndex = currentIndex + direction;
+    if (newIndex >= 0 && newIndex < images.length) {
+      openLightbox(newIndex);
+    }
+  }
+
+  // Trigger clicks
+  images.forEach((trigger, index) => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLightbox(index);
+    });
+  });
+
+  // Control buttons
+  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+  if (prevBtn)  prevBtn.addEventListener('click', () => navigate(-1));
+  if (nextBtn)  nextBtn.addEventListener('click', () => navigate(1));
+
+  // Backdrop click — close only when clicking the overlay itself, not children
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Keyboard: Escape, ArrowLeft, ArrowRight, Tab (focus trap)
+  const FOCUSABLE = 'button:not([disabled])';
+
+  lightbox.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLightbox();
+      return;
+    }
+
+    if (e.key === 'ArrowLeft') {
+      navigate(-1);
+      return;
+    }
+
+    if (e.key === 'ArrowRight') {
+      navigate(1);
+      return;
+    }
+
+    if (e.key !== 'Tab') return;
+
+    // Focus trap cycling between focusable controls
+    const focusable = [...lightbox.querySelectorAll(FOCUSABLE)];
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last  = focusable[focusable.length - 1];
+
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
+}());

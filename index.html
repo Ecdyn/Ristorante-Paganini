@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+  <!-- Root redirect page — not indexed, not in sitemap. See Phase 8. -->
+
+  <!-- ============================================================ -->
+  <!-- META — charset (must be first) and viewport                  -->
+  <!-- ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================================================ -->
+  <!-- TITLE                                                        -->
+  <!-- Simple title — this page is not indexed by search engines    -->
+  <!-- ============================================================ -->
+  <title>Ristorante Paganini</title>
+
+  <!-- ============================================================ -->
+  <!-- SEO: keep this redirect page out of search indexes           -->
+  <!-- ============================================================ -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- ============================================================ -->
+  <!-- NO-JS FALLBACK — inside <head> for meta refresh to work      -->
+  <!-- Sends JS-disabled browsers and bots to German default        -->
+  <!-- ============================================================ -->
+  <noscript><meta http-equiv="refresh" content="0;url=/de/"></noscript>
+
+  <!-- ============================================================ -->
+  <!-- FAVICON SET                                                  -->
+  <!-- Paths from root — use assets/ not ../assets/                 -->
+  <!-- ============================================================ -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+
+  <!-- ============================================================ -->
+  <!-- INLINE STYLES — branded flash only                           -->
+  <!-- No external CSS link — avoids blocking HTTP request          -->
+  <!-- on a page the user exits in under 100ms                      -->
+  <!-- Color values mirrored from main.css design tokens:           -->
+  <!--   #2C1A1D = --color-surface-dark                             -->
+  <!--   #FBF5F5 = --color-text-inverse                             -->
+  <!-- ============================================================ -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      background-color: #2C1A1D;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .redirect-flash {
+      color: #FBF5F5;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-align: center;
+      opacity: 0.9;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Branded flash — aria-hidden because it is decorative, not content -->
+  <div class="redirect-flash" aria-hidden="true">Ristorante Paganini</div>
+
+  <!-- Language detection: iterates navigator.languages, redirects to first supported match, defaults to /de/ -->
+  <script>
+    (function () {
+      'use strict';
+      var supported = { de: '/de/', en: '/en/', it: '/it/' };
+      var langs = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || 'de'];
+
+      for (var i = 0; i < langs.length; i++) {
+        var prefix = langs[i].toLowerCase().split('-')[0];
+        if (supported[prefix]) {
+          window.location.replace(supported[prefix]);
+          return;
+        }
+      }
+      window.location.replace('/de/');
+    }());
+  </script>
+
+</body>
+</html>

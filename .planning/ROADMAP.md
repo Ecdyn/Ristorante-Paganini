@@ -66,7 +66,7 @@ Plans:
   4. The HTML document has exactly one H1 element in the skeleton markup, lang="de" on the html element, and all 12 section anchor IDs (language-neutral: #menu, #lunch, #location, etc.) defined as empty section elements ready for content
 **Plans:** 1 plan
 Plans:
-- [ ] 03-01-PLAN.md — Complete de/index.html with head (meta, hreflang, JSON-LD, OG, Twitter, favicon, CSS/JS) and body skeleton (header/nav, 12 sections, footer)
+- [x] 03-01-PLAN.md — Complete de/index.html with head (meta, hreflang, JSON-LD, OG, Twitter, favicon, CSS/JS) and body skeleton (header/nav, 12 sections, footer)
 
 ### Phase 4: German Onepage — All 12 Content Sections
 **Goal**: /de/index.html is a complete, fully-functional German restaurant page that a real visitor can use — every section has its content, every CTA works, every image loads correctly, and the page passes Core Web Vitals
@@ -79,7 +79,12 @@ Plans:
   4. The business lunch section displays the 11:30–14:30 hours, a monthly-updatable highlights block, and a PDF link, with clear HTML comments marking every field an agency would need to update each month
   5. The gallery loads with CSS grid, below-fold images carry loading="lazy" and decoding="async", the location section shows a static address with a Google Maps link (no iframe), and the groups section has phone + email CTAs only (no form, no backend dependency)
   6. The FAQ section contains 7 complete questions and answers written in natural German targeting local Leipzig search intent, and the FAQPage JSON-LD in the head matches every question on the page exactly
-**Plans**: TBD
+**Plans:** 4 plans
+Plans:
+- [x] 04-01-PLAN.md — CSS blocks for content sections + placeholder PDFs
+- [ ] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
+- [ ] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
+- [ ] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
 **UI hint**: yes
 
 ### Phase 5: English and Italian Onepages
@@ -91,7 +96,12 @@ Plans:
   2. The EN and IT pages each have self-canonical tags pointing to their own respective URLs (not the DE URL), og:locale set to en_GB and it_IT respectively, and JSON-LD with all translatable fields in the correct language
   3. All 12 sections in both EN and IT pages carry fully localized content — nav labels, button text, headings, body copy, FAQ questions, and schema — with no German strings remaining anywhere on the page
   4. The language switcher links in all three footers (DE, EN, IT) navigate correctly to the other two language versions, and all anchor IDs are language-neutral so switcher links land at the equivalent section in the target language
-**Plans**: TBD
+**Plans:** 4 plans
+Plans:
+- [x] 04-01-PLAN.md — CSS blocks for content sections + placeholder PDFs
+- [ ] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
+- [ ] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
+- [ ] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
 **UI hint**: yes
 
 ### Phase 6: Legal Pages
@@ -103,7 +113,12 @@ Plans:
   2. Every footer in all three language onepages links to the correct legal pages for that language, and those links are keyboard-reachable
   3. Each Datenschutz/privacy page contains a clearly commented placeholder section documenting the Google Maps decision (static address + link, no iframe) and states that no Google Fonts CDN is used — matching the actual implementation
   4. All editable legal placeholder areas are marked with prominent HTML comments reading "REPLACE WITH REAL LEGAL TEXT BEFORE LAUNCH" with the specific section identified
-**Plans**: TBD
+**Plans:** 4 plans
+Plans:
+- [x] 04-01-PLAN.md — CSS blocks for content sections + placeholder PDFs
+- [ ] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
+- [ ] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
+- [ ] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
 **UI hint**: yes
 
 ### Phase 7: Root Redirect
@@ -115,7 +130,12 @@ Plans:
   2. A browser with an unrecognized language (e.g., French, Japanese) is redirected to /de/ as the default fallback
   3. The root index.html carries a meta noindex tag, contains no visible content, and is not listed in sitemap.xml — it is a redirect utility only
   4. A noscript fallback meta refresh tag redirects to /de/ for browsers with JavaScript disabled
-**Plans**: TBD
+**Plans:** 4 plans
+Plans:
+- [x] 04-01-PLAN.md — CSS blocks for content sections + placeholder PDFs
+- [ ] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
+- [ ] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
+- [ ] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
 
 ### Phase 8: SEO Files and Technical Audit
 **Goal**: The site has complete SEO infrastructure files and passes all technical validation checks — the site is launch-ready with zero known errors in structured data, hreflang, Core Web Vitals, or accessibility
@@ -128,7 +148,12 @@ Plans:
   4. Lighthouse on the German onepage scores LCP under 2.5 seconds, zero CLS, and flags zero render-blocking resources
   5. A WAVE accessibility audit on all three onepages returns zero errors (contrast, missing alt, missing form labels, heading hierarchy)
 
-**Plans**: TBD
+**Plans:** 4 plans
+Plans:
+- [x] 04-01-PLAN.md — CSS blocks for content sections + placeholder PDFs
+- [ ] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
+- [ ] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
+- [ ] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
 
 ## Progress
 

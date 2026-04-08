@@ -18,19 +18,19 @@ progress:
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-04-06)
+See: .planning/PROJECT.md (updated 2026-04-08)
 
 **Core value:** Visitors instantly trust Ristorante Paganini as an authentic, premium Italian restaurant in Leipzig's city center and can reserve a table within seconds.
-**Current focus:** Phase 05 — english-and-italian-onepages
+**Current focus:** Phase 06 — Legal Pages
 
 ## Current Position
 
 Phase: 6
 Plan: Not started
-Status: Executing Phase 05
-Last activity: 2026-04-08
+Status: Ready to plan
+Last activity: 2026-04-08 -- Phase 05 complete, ready to plan Phase 06
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [██████░░░░] 62%
 
 ## Performance Metrics
 
@@ -70,6 +70,7 @@ Recent decisions affecting current work:
 - Init: Groups inquiry is phone + email only — no form, no backend
 - Init: Hero image must NOT be lazy loaded — fetchpriority="high" required for LCP
 - Init: hreflang must be reciprocal on all pages — build into skeleton from Phase 3, complete all three files simultaneously in Phase 5
+- Phase 5: PDF filenames (speisekarte.pdf, mittagskarte.pdf) kept in German across all language versions — they are file paths, not visible text
 - Init: Root redirect is last thing built — only after all language dirs exist (Phase 7)
 
 ### Pending Todos
@@ -84,6 +85,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-08T13:09:47.753Z
-Stopped at: Phase 5 UI-SPEC approved
-Resume file: .planning/phases/05-english-and-italian-onepages/05-UI-SPEC.md
+Last session: 2026-04-08
+Stopped at: Phase 5 complete, ready to plan Phase 6
+Resume file: None

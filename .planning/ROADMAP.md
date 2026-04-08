@@ -124,7 +124,9 @@ Plans:
   2. A browser with an unrecognized language (e.g., French, Japanese) is redirected to /de/ as the default fallback
   3. The root index.html carries a meta noindex tag, contains no visible content, and is not listed in sitemap.xml — it is a redirect utility only
   4. A noscript fallback meta refresh tag redirects to /de/ for browsers with JavaScript disabled
-**Plans:** TBD
+**Plans:** 1 plan
+Plans:
+- [ ] 07-01-PLAN.md — Root index.html with language detection, branded flash, noscript fallback, and noindex meta
 
 ### Phase 8: SEO Files and Technical Audit
 **Goal**: The site has complete SEO infrastructure files and passes all technical validation checks — the site is launch-ready with zero known errors in structured data, hreflang, Core Web Vitals, or accessibility
@@ -152,5 +154,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 4. German Onepage — All 12 Content Sections | 4/4 | Complete | - |
 | 5. English and Italian Onepages | 0/3 | Planning complete | - |
 | 6. Legal Pages | 0/TBD | Not started | - |
-| 7. Root Redirect | 0/TBD | Not started | - |
+| 7. Root Redirect | 0/1 | Planning complete | - |
 | 8. SEO Files and Technical Audit | 0/TBD | Not started | - |

@@ -98,9 +98,9 @@ Plans:
   4. The language switcher links in all three footers (DE, EN, IT) navigate correctly to the other two language versions, and all anchor IDs are language-neutral so switcher links land at the equivalent section in the target language
 **Plans:** 3 plans
 Plans:
-- [ ] 05-01-PLAN.md — Create en/index.html with full English localization
-- [ ] 05-02-PLAN.md — Create it/index.html with full Italian localization
-- [ ] 05-03-PLAN.md — Cross-validate hreflang reciprocity and visual verification
+- [x] 05-01-PLAN.md — Create en/index.html with full English localization
+- [x] 05-02-PLAN.md — Create it/index.html with full Italian localization
+- [x] 05-03-PLAN.md — Cross-validate hreflang reciprocity and visual verification
 **UI hint**: yes
 
 ### Phase 6: Legal Pages

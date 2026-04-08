@@ -3,40 +3,40 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 5 UI-SPEC approved
-last_updated: "2026-04-08T13:25:03.389Z"
-last_activity: 2026-04-08 -- Phase 5 planning complete
+stopped_at: Phase 6 context gathered
+last_updated: "2026-04-08T14:43:57.754Z"
+last_activity: 2026-04-08 -- Phase 06 execution started
 progress:
   total_phases: 8
-  completed_phases: 4
-  total_plans: 12
-  completed_plans: 9
-  percent: 75
+  completed_phases: 5
+  total_plans: 14
+  completed_plans: 12
+  percent: 86
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-04-06)
+See: .planning/PROJECT.md (updated 2026-04-08)
 
 **Core value:** Visitors instantly trust Ristorante Paganini as an authentic, premium Italian restaurant in Leipzig's city center and can reserve a table within seconds.
-**Current focus:** Phase 04 — german-onepage-all-12-content-sections
+**Current focus:** Phase 06 — legal-pages
 
 ## Current Position
 
-Phase: 5
-Plan: Not started
-Status: Ready to execute
-Last activity: 2026-04-08 -- Phase 5 planning complete
+Phase: 06 (legal-pages) — EXECUTING
+Plan: 1 of 2
+Status: Executing Phase 06
+Last activity: 2026-04-08 -- Phase 06 execution started
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [██████░░░░] 62%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 9
+- Total plans completed: 12
 - Average duration: —
 - Total execution time: 0 hours
 
@@ -48,6 +48,7 @@ Progress: [░░░░░░░░░░] 0%
 | 02 | 2 | - | - |
 | 03 | 1 | - | - |
 | 04 | 4 | - | - |
+| 05 | 3 | - | - |
 
 **Recent Trend:**
 
@@ -69,6 +70,7 @@ Recent decisions affecting current work:
 - Init: Groups inquiry is phone + email only — no form, no backend
 - Init: Hero image must NOT be lazy loaded — fetchpriority="high" required for LCP
 - Init: hreflang must be reciprocal on all pages — build into skeleton from Phase 3, complete all three files simultaneously in Phase 5
+- Phase 5: PDF filenames (speisekarte.pdf, mittagskarte.pdf) kept in German across all language versions — they are file paths, not visible text
 - Init: Root redirect is last thing built — only after all language dirs exist (Phase 7)
 
 ### Pending Todos
@@ -83,6 +85,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-08T13:09:47.753Z
-Stopped at: Phase 5 UI-SPEC approved
-Resume file: .planning/phases/05-english-and-italian-onepages/05-UI-SPEC.md
+Last session: 2026-04-08T14:12:35.230Z
+Stopped at: Phase 6 context gathered
+Resume file: .planning/phases/06-legal-pages/06-CONTEXT.md

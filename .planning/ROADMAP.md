@@ -96,12 +96,11 @@ Plans:
   2. The EN and IT pages each have self-canonical tags pointing to their own respective URLs (not the DE URL), og:locale set to en_GB and it_IT respectively, and JSON-LD with all translatable fields in the correct language
   3. All 12 sections in both EN and IT pages carry fully localized content — nav labels, button text, headings, body copy, FAQ questions, and schema — with no German strings remaining anywhere on the page
   4. The language switcher links in all three footers (DE, EN, IT) navigate correctly to the other two language versions, and all anchor IDs are language-neutral so switcher links land at the equivalent section in the target language
-**Plans:** 4 plans
+**Plans:** 3 plans
 Plans:
-- [x] 04-01-PLAN.md — CSS blocks for content sections + placeholder PDFs
-- [x] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
-- [x] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
-- [x] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
+- [ ] 05-01-PLAN.md — Create en/index.html with full English localization
+- [ ] 05-02-PLAN.md — Create it/index.html with full Italian localization
+- [ ] 05-03-PLAN.md — Cross-validate hreflang reciprocity and visual verification
 **UI hint**: yes
 
 ### Phase 6: Legal Pages
@@ -113,12 +112,7 @@ Plans:
   2. Every footer in all three language onepages links to the correct legal pages for that language, and those links are keyboard-reachable
   3. Each Datenschutz/privacy page contains a clearly commented placeholder section documenting the Google Maps decision (static address + link, no iframe) and states that no Google Fonts CDN is used — matching the actual implementation
   4. All editable legal placeholder areas are marked with prominent HTML comments reading "REPLACE WITH REAL LEGAL TEXT BEFORE LAUNCH" with the specific section identified
-**Plans:** 4 plans
-Plans:
-- [x] 04-01-PLAN.md — CSS blocks for content sections + placeholder PDFs
-- [x] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
-- [x] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
-- [ ] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
+**Plans:** TBD
 **UI hint**: yes
 
 ### Phase 7: Root Redirect
@@ -130,12 +124,7 @@ Plans:
   2. A browser with an unrecognized language (e.g., French, Japanese) is redirected to /de/ as the default fallback
   3. The root index.html carries a meta noindex tag, contains no visible content, and is not listed in sitemap.xml — it is a redirect utility only
   4. A noscript fallback meta refresh tag redirects to /de/ for browsers with JavaScript disabled
-**Plans:** 4 plans
-Plans:
-- [x] 04-01-PLAN.md — CSS blocks for content sections + placeholder PDFs
-- [x] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
-- [x] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
-- [ ] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
+**Plans:** TBD
 
 ### Phase 8: SEO Files and Technical Audit
 **Goal**: The site has complete SEO infrastructure files and passes all technical validation checks — the site is launch-ready with zero known errors in structured data, hreflang, Core Web Vitals, or accessibility
@@ -148,12 +137,7 @@ Plans:
   4. Lighthouse on the German onepage scores LCP under 2.5 seconds, zero CLS, and flags zero render-blocking resources
   5. A WAVE accessibility audit on all three onepages returns zero errors (contrast, missing alt, missing form labels, heading hierarchy)
 
-**Plans:** 4 plans
-Plans:
-- [x] 04-01-PLAN.md — CSS blocks for content sections + placeholder PDFs
-- [ ] 04-02-PLAN.md — Hero, info bar, about, menu, and business lunch sections
-- [ ] 04-03-PLAN.md — Gallery lightbox JavaScript behavior
-- [ ] 04-04-PLAN.md — Gallery, reservation, events, location, FAQ, contact, footer + FAQPage JSON-LD
+**Plans:** TBD
 
 ## Progress
 
@@ -162,11 +146,11 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. CSS Design System | 0/2 | Planning complete | - |
-| 2. JS and Asset Foundation | 0/2 | Planning complete | - |
-| 3. German Onepage — Head and SEO Skeleton | 0/1 | Planning complete | - |
-| 4. German Onepage — All 12 Content Sections | 0/TBD | Not started | - |
-| 5. English and Italian Onepages | 0/TBD | Not started | - |
+| 1. CSS Design System | 2/2 | Complete | - |
+| 2. JS and Asset Foundation | 2/2 | Complete | - |
+| 3. German Onepage — Head and SEO Skeleton | 1/1 | Complete | - |
+| 4. German Onepage — All 12 Content Sections | 4/4 | Complete | - |
+| 5. English and Italian Onepages | 0/3 | Planning complete | - |
 | 6. Legal Pages | 0/TBD | Not started | - |
 | 7. Root Redirect | 0/TBD | Not started | - |
 | 8. SEO Files and Technical Audit | 0/TBD | Not started | - |

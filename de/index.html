@@ -191,14 +191,52 @@
 
     <!-- SECT-01: Hero -->
     <section class="hero" id="hero">
-      <!-- EDITABLE: Hero image, heading, subheadline, and CTA buttons added in Phase 4 -->
-      <h1><!-- EDITABLE: Restaurant name heading — filled in Phase 4 --></h1>
+
+      <picture>
+        <source srcset="../assets/img/hero-desktop.avif" type="image/avif" media="(min-width: 769px)">
+        <source srcset="../assets/img/hero-desktop.webp" type="image/webp" media="(min-width: 769px)">
+        <source srcset="../assets/img/hero-mobile.avif" type="image/avif">
+        <source srcset="../assets/img/hero-mobile.webp" type="image/webp">
+        <img src="../assets/img/hero-desktop.svg"
+             alt="Elegantes italienisches Restaurant Ristorante Paganini in Leipzig"
+             width="1400" height="800"
+             loading="eager" fetchpriority="high" decoding="sync"
+             class="hero__bg">
+      </picture>
+
+      <div class="hero__content flow">
+        <span class="section-label">Ristorante Paganini</span>
+        <h1><em>Dove il gusto incontra la tradizione</em></h1>
+        <!-- EDITABLE: Trust cues — update with real phone number and hours before launch -->
+        <div class="cluster hero__trust-cues">
+          <span>Seit über 30 Jahren familiengeführt</span>
+          <span>Im Herzen der Leipziger Innenstadt</span>
+          <!-- EDIT: Replace XXXXXXXX with real phone number -->
+          <span>Mo–Sa 11:30–22:00 Uhr · +49 341 XXXXXXXX</span>
+        </div>
+        <div class="cluster">
+          <a href="#reservation" class="btn" data-variant="primary">Tisch reservieren</a>
+          <a href="#menu" class="btn" data-variant="secondary" style="color: var(--color-text-inverse); border-color: var(--color-text-inverse);">Speisekarte</a>
+        </div>
+      </div>
+
       <div class="hero-sentinel" aria-hidden="true"></div>
     </section>
 
     <!-- SECT-02: Quick Info Bar -->
-    <section id="info">
-      <!-- EDITABLE: Quick info bar — opening hours, address, phone, CTA — added in Phase 4 -->
+    <section id="info" class="section--dark">
+      <div class="info-bar wrapper">
+        <!-- EDITABLE: Opening hours — update if hours change -->
+        <span><strong>Öffnungszeiten:</strong> Mo–Fr 11:30–22:00 · Sa 12:00–22:00 · So 12:00–21:00</span>
+        <!-- EDIT: Replace with real address -->
+        <span><strong>Adresse:</strong> Große Fleischergasse, 04109 Leipzig</span>
+        <!-- EDIT: Replace XXXXXXXX with real phone number -->
+        <span><strong>Telefon:</strong> <a href="tel:+49341XXXXXXXX">+49 341 XXXXXXXX</a></span>
+        <a href="#reservation" class="btn" data-variant="primary">Tisch reservieren</a>
+        <span><strong>Mittagstisch:</strong> Mo–Fr 11:30–14:30 Uhr</span>
+        <!-- EDITABLE: Terrace note — update seasonally -->
+        <span>Terrasse geöffnet (saisonal)</span>
+      </div>
     </section>
 
     <!-- SECT-03: About / Philosophy -->

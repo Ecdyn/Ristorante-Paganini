@@ -139,7 +139,10 @@ Plans:
   4. Lighthouse on the German onepage scores LCP under 2.5 seconds, zero CLS, and flags zero render-blocking resources
   5. A WAVE accessibility audit on all three onepages returns zero errors (contrast, missing alt, missing form labels, heading hierarchy)
 
-**Plans:** TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 08-01-PLAN.md — Create sitemap.xml with multilingual hreflang entries and robots.txt with crawler directives
+- [ ] 08-02-PLAN.md — JSON-LD validation script and manual launch readiness audit
 
 ## Progress
 
@@ -155,4 +158,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 5. English and Italian Onepages | 0/3 | Planning complete | - |
 | 6. Legal Pages | 0/TBD | Not started | - |
 | 7. Root Redirect | 0/1 | Planning complete | - |
-| 8. SEO Files and Technical Audit | 0/TBD | Not started | - |
+| 8. SEO Files and Technical Audit | 0/2 | Planning complete | - |

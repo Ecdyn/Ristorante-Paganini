@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- REPLACE example.com WITH REAL DOMAIN BEFORE LAUNCH -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://www.example.com/de/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.example.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.example.com/de/"/>
+  </url>
+
+  <url>
+    <loc>https://www.example.com/en/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.example.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.example.com/de/"/>
+  </url>
+
+  <url>
+    <loc>https://www.example.com/it/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.example.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.example.com/de/"/>
+  </url>
+
+</urlset>

@@ -133,7 +133,7 @@ Plans:
 **Depends on**: Phase 7
 **Requirements**: SEO-06, SEO-07
 **Success Criteria** (what must be TRUE):
-  1. sitemap.xml lists all nine content pages (3 onepages + 6 legal pages) with hreflang alternate entries — the root redirect page is absent from the sitemap, and the sitemap URL is referenced in robots.txt
+  1. sitemap.xml lists all 3 onepage URLs (DE, EN, IT) with hreflang alternate entries — legal pages are excluded because they carry noindex meta tags (per D-01), the root redirect page is absent from the sitemap, and the sitemap URL is referenced in robots.txt
   2. robots.txt allows all crawlers on all content pages, disallows crawling of the root redirect, and includes the sitemap directive pointing to the absolute sitemap.xml URL
   3. Google's Rich Results Test returns zero errors on all three language onepages — Restaurant, LocalBusiness, and FAQPage structured data all validate cleanly
   4. Lighthouse on the German onepage scores LCP under 2.5 seconds, zero CLS, and flags zero render-blocking resources
@@ -141,8 +141,8 @@ Plans:
 
 **Plans:** 2 plans
 Plans:
-- [ ] 08-01-PLAN.md — Create sitemap.xml with multilingual hreflang entries and robots.txt with crawler directives
-- [ ] 08-02-PLAN.md — JSON-LD validation script and manual launch readiness audit
+- [x] 08-01-PLAN.md — Create sitemap.xml with multilingual hreflang entries and robots.txt with crawler directives
+- [x] 08-02-PLAN.md — JSON-LD validation script and manual launch readiness audit
 
 ## Progress
 

@@ -1,0 +1,11 @@
+# Ristorante Paganini — robots.txt
+# REPLACE example.com WITH REAL DOMAIN BEFORE LAUNCH
+
+User-agent: *
+Allow: /
+Disallow: /index.html
+
+# Allow crawling of all assets (required for Google rendering-based indexing)
+Allow: /assets/
+
+Sitemap: https://www.example.com/sitemap.xml
